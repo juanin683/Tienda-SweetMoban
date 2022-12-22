@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image:url(https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?crop=entropy&cs=tinysrgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8c2VhcmNofDIxMHx8cm9wYXxlbnwwfHx8fDE2Njk2OTQyNzc&ixlib=rb-4.0.3&q=80&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+header{
+    background-color: rgb(140, 60, 60);
+    
+    opacity: 0.6;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*logo */
+.sombrerito a img{
+    position: absolute;
+    width: 100px;
+    padding: 5px;
+    bottom: 82%;
+    margin-left: 2px;
+    
+}
+/*sweet moban*/
+.sombrerito p{
+    color: #FFFF;
+    position: absolute;
+    left:9%;
+    bottom: 87%;
+    font-size: 30px;
+}
+
+.imgaFinal1 img{
+    background-color: rgb(197, 131, 131);
+    border-radius: 5%;
+    border-top: 10%;
+    
+    
+}
+.imgaFinal1{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    margin-right: 18px;
+    margin-bottom: 27px;
+}
+
+.imgaFinal1 p{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    color: #FFFF;
+    padding-top: 24px;
+    padding-right: 10px;
+}
+
+.imgaFinal2 img{
+    background-color: rgb(255, 193, 193);
+    border-radius: 10%;
+}
+.imgaFinal2{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 18px;
+    
+
+}
+
+.imgaFinal2 p{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 19px;
+    padding-right: 30px;
+    font-size: 20px;
+    color: #FFFF;
+}
+
+
+.navBarStyle li a{
+    text-decoration: none;
+    color: rgb(247, 193, 207);
+    font-weight: 100px;
+    font-size: 20px;
+    font-family: Helvetica;
+    margin-top: 10px;
+    
+    padding: 6px 27px;
+
+}
+
+.navBarStyle {
+    color: rgb(241, 241, 226);
+    font-weight: 50px;
+    text-decoration: none;
+    padding-top: 22px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    
+}
+
+/*main*/
+.imagenPortada img{
+    width: 650px;
+    height: 347px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    margin-right: -20px;
+    
+    
+}
+
+.imagen2 img {
+    width: 330px;
+    margin: 10px;
+}
+
+
+.descripciones{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px;
+    
+}
+
+.imagenesIngresos p{
+    text-align: center;
+    font-size: 60px;
+    color: antiquewhite;
+}
+
+
+.imagenesIngresos img{
+    padding: 15px;
+    
+}
+
+/*metodos de pago*/
+.pagos h1{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 40px;
+}
+
+.pagos img{
+    align-items: center;
+    border-radius: 5rem;
+    height: 100px;
+}
+
+
+
+
+
+/*registrate para obtener ofertas*/
+.registro h2{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 40px;
+}
+
+#button{
+    padding: 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    border-radius: 10rem;
+    color: rgb(255, 255, 255);
+    background-color: #2B3A55;
+    border-color: #E8C4C4;
+    cursor: pointer;
+}
+
+.buttonIgualaId{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/*sobre-mi*/
+.sobreMi h1{
+    text-align: center;
+    color: #FFFF;
+    font-size: 40px;
+}
+
+.sobreMi p {
+    color: #FFFF;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+/*catalogo*/
+.imagenesCatalogo{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 40px;
+    align-content: space-evenly;
+    
+}
+
+.imagenesCatalogo img{
+    padding: 15px;
+}
+
+/*informacion*/
+.textoInfo h1{
+    text-align: center;
+    color: #FFFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.textoInfo p{
+    text-align: center;
+    color: #FFFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    padding: 20px 30px;
+}
+
+.texto2Info h2{
+    text-align: center;
+    color: #FFFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    padding: 20px 30px;
+}
+
+.texto2Info p{
+    text-align: center;
+    color: #FFFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    
+}
+
+/*login*/
+
+.blazer{
+    color: #fef9bd;
+}
+
+legend{
+    font-size: 40px;
+    padding: 15px;
+    color: #faf5e7;
+    text-decoration-line: underline;
+}
+
+
+.campo1{
+    color: #faf5e7;
+    padding: 50px;
+    font-size: 30px;
+    
+}
+
+.campo2{
+    color: #faf5e7;
+    padding: 35px;
+    font-size: 30px;
+    
+}
+
+/*imgejemplo*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer .pieDePagina{
+    background-color: #fadb9336;
+    margin-top: 80px;
+    border-radius: 5px;
+    padding: 17px;
+}
+
+footer p {
+    font-size: 30px;
+    color: #FFFF;
+    padding: 5px;
+}
+
+footer .mapaGoogle{
+    padding: 20px;
+}
+
+
