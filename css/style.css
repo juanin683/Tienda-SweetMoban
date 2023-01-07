@@ -44,6 +44,14 @@ header{
 }
 
 /*contacto*/
+
+
+.contenedor-c-c{
+    position: absolute;
+    right: 0;
+    display: flex;
+
+}
 .imgaFinal1 img{
     background-color: rgb(197, 131, 131);
     border-radius: 5%;
@@ -485,8 +493,8 @@ header{
 /*contenedorcontactoycarrito*/
 .contenedor-c-c{
     position: absolute;
-    top: 0;
     right: 0;
+    display: flex;
 
 }
 /*contacto*/
