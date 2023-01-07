@@ -47,8 +47,7 @@ header{
 
 
 .contenedor-c-c{
-    position: absolute;
-    right: 0;
+    
     display: flex;
 
 }
@@ -492,15 +491,17 @@ header{
 
 /*contenedorcontactoycarrito*/
 .contenedor-c-c{
-    position: absolute;
-    right: 0;
+    
     display: flex;
+    padding: 20px;
 
 }
 /*contacto*/
 .imgaFinal1 img{
     background-color: rgb(217, 146, 146);
     border-radius: 7%;
+    width: 60px;
+    height: 60px;
 }
 
 html{
@@ -595,11 +596,9 @@ html{
 .imgaFinal2 img{
     background-color: rgb(221, 157, 157);
     border-radius: 10%;
-    height: 64px;
+    height: 20px;
 }
 .imgaFinal2{
-    display: flex;
-    flex-direction: row-reverse;
     
 }
     
