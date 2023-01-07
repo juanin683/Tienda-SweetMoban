@@ -460,6 +460,7 @@ header{
     opacity: 0.6;
     align-items: center;
     width: 106%;
+    position: relative;
 }
 
 /*logo */
@@ -483,14 +484,15 @@ header{
 
 /*contenedorcontactoycarrito*/
 .contenedor-c-c{
-    display: block;
-    margin: 4px;
-    padding:5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
 }
 /*contacto*/
 .imgaFinal1 img{
     background-color: rgb(217, 146, 146);
-    border-radius: 5%;
+    border-radius: 7%;
 }
 
 html{
@@ -498,10 +500,7 @@ html{
 }
 
 .imgaFinal1{
-    display: flex;
-    flex-direction: row-reverse;
-    
-
+    margin-right: 20px;
 }
 
 .imgaFinal1 img{ 
@@ -603,30 +602,8 @@ html{
 
 
 /*navbar*/
-.navBarStyle li a{
-        text-decoration: none;
-        color: rgb(247, 193, 207);
-    font-weight: 100px;
-        font-size: 20px;
-        font-family: Helvetica;
-        margin: 7px;
-        padding: 7px 11px;
-        display: grid;
-        grid-template-columns: repeat(3, 35px);
-        grid-template-rows: 46px;
-    }
-    
-.navBarStyle {
-    color: rgb(241, 241, 226);
-    font-weight: 50px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    list-style: none;
-    padding: 5px;
-    margin: 11px;
-    
+.navbar-nav{
+    padding-right:10px;
 }
 
 
@@ -1017,7 +994,7 @@ html{
 
 
 
-/*tablet*/
+/*tablet catalogo.html*/
 
 @media (max-width:768px) {
 /*logo e sweetmoban*/
