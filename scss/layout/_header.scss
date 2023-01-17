@@ -1,0 +1,224 @@
+
+/*index.html*/
+header{
+    background-color: rgb(155, 90, 90);
+    opacity: 0.6;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto;
+    
+    .container-fluid{
+        background-color: rgb(238, 150, 150);
+        height: 50%;
+        align-items: center;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    /*logo */
+    .sombrerito a img{
+        position: absolute;
+        width: 100px;
+        padding: 5px;
+        bottom: 82%;
+        margin: 2px;
+        
+    }
+
+    /*sweet moban*/
+    .sombrerito p{
+        color: #FFFF;
+        position: absolute;
+        left:9%;
+        bottom: 87%;
+        font-size: 35px;
+        margin: 5px;
+    }
+
+    /*container contacto carrito*/
+    .contenedor-c-c{
+        display: flex;
+        position: absolute;
+        top: 37px;
+        right: 117px;
+        margin: -30px;
+        flex-direction: column;
+        
+    }
+
+
+    .imgaFinal1{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 80px;
+            img{
+                background-color: rgb(238, 133, 133);
+                border-radius: 5%;
+                border-top: 10%;
+        }
+    }
+    .imgaFinal1{
+    -webkit-animation: heartbeat 2s ease-in-out  both;
+            animation: heartbeat 2s ease-in-out both;
+    }
+
+
+    @-webkit-keyframes heartbeat {
+        from {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-transform-origin: center center;
+            transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+                nimation-timing-function: ease-out;
+        }
+        10% {
+        -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        17% {
+        -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+        33% {
+        -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        45% {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+    }
+    @keyframes heartbeat {
+        from {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-transform-origin: center center;
+            transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+        10% {
+        -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        17% {
+        -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+        33% {
+        -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        45% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+    }
+
+
+    .imgaFinal1 p{
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 20px;
+        /*color: #FFFF;*/
+        padding-top: 24px;
+        padding-right: 10px;
+    }
+
+    /*carrito*/
+    .imgaFinal2{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: -4px;
+        padding: 6px;
+        margin-top: -14px;
+            img{
+                background-color:rgb(241, 126, 126);
+                border-radius: 10%;
+                height: 50px;
+            }
+
+            p{
+                display: flex;
+                flex-direction: row-reverse;
+                padding-top: 19px;
+                padding-right: 30px;
+                font-size: 20px;
+                /*color: #FFFF;*/
+            }
+
+}
+
+
+/*navbar*/
+.navBarStyle {
+    color: rgb(241, 241, 226);
+    font-weight: 50px;
+    text-decoration: none;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+        li{
+            a{
+                text-decoration: none;
+                color: #f7c1cf;
+                font-weight: 100px;
+                font-size: 20px;
+                font-family: Helvetica;
+                margin: 7px;
+                padding: 7px 11px;
+                display: grid;
+                grid-template-columns: repeat(3, 35px);
+                grid-template-rows: 46px; }
+            }
+        }
+
+}
+
+/*catalogo.html(pagina responsive)*/
+.container-img-p{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.sweetmoban{
+    display: flex;
+    margin: 13px;
+    font-size: 30px;
+    flex-direction: row;
+
+}
+
+.img-logo{
+    margin: -4px;
+}
+
+
+.linea{
+    background-color: purple;
+    width: 100%;
+    height: 5px;
+    display: block;
+}
+
+

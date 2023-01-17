@@ -1,0 +1,455 @@
+/*tablet(index.html)*/
+@media(max-width: 768px){
+
+    body{
+        background-image: url("../assets/img/imgBody2.png") ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 700px;
+    }
+    
+    header{
+        background-color: rgb(140, 60, 60);
+        opacity: 0.6;
+        align-items: center;
+        width: 106%;
+        position: relative;
+    
+    
+        /*logo */
+        .sombrerito a img{
+            position: absolute;
+            width: 100px;
+            padding: 5px;
+            bottom: 85%;
+            margin: 5px;
+            
+        }
+        /*sweet moban*/
+        .sombrerito p{
+            color: #FFFF;
+            display: grid;
+            grid-template-columns: repeat(2,100px);
+            grid-template-rows: repeat(2,29px);
+            padding-left: 65px;
+            
+        }
+    
+        /*contenedorcontactoycarrito*/
+        .contenedor-c-c{
+            padding: 20px;
+            margin-top: -20px;
+            display: flex;
+            position: absolute;
+            top: 37px;
+            right: 117px;
+            margin: -30px;
+            flex-direction: row; 
+        }
+        /*contacto*/
+        .imgaFinal1 img{
+            background-color: rgb(217, 146, 146);
+            border-radius: 7%;
+            width: 60px;
+            height: 60px;
+        }
+    
+        html{
+            scroll-behavior: smooth;
+        }
+    
+        .imgaFinal1{
+            margin-right: 20px;
+        }
+    
+        .imgaFinal1 img{ 
+            -webkit-animation: heartbeat 2s ease-in-out  both;
+                animation: heartbeat 2s ease-in-out both;
+        }
+    
+        @-webkit-keyframes heartbeat {
+            from {
+            -webkit-transform: scale(1);
+                transform: scale(1);
+            -webkit-transform-origin: center center;
+                transform-origin: center center;
+            -webkit-animation-timing-function: ease-out;
+                    nimation-timing-function: ease-out;
+            }
+            10% {
+            -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+            -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            17% {
+            -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+            -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+            33% {
+            -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+            -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            45% {
+            -webkit-transform: scale(1);
+                transform: scale(1);
+            -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+        }
+        @keyframes heartbeat {
+            from {
+            -webkit-transform: scale(1);
+                transform: scale(1);
+            -webkit-transform-origin: center center;
+                transform-origin: center center;
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+            }
+            10% {
+            -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+            -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            17% {
+            -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+            -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+            33% {
+            -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+            -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+            45% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+            }
+        }
+    
+        .imgaFinal1 p{
+            display: none;
+        }
+    
+        /*carrito*/
+        .imgaFinal2 img{
+            background-color: rgb(221, 157, 157);
+            border-radius: 10%;
+            height: 60px;
+        }
+        .imgaFinal2{
+            display: flex;
+            flex-direction: row-reverse;
+            margin-right: -4px;
+            padding: 6px;
+            margin-top: -6px; 
+        }
+            
+        .imgaFinal2 p{
+            display: none;
+        }
+    
+        /*navbar*/
+        .navbar-nav{
+            padding-right:10px;
+        }
+    
+    }
+    
+    
+    /*main*/
+    /*imagenesIngresos */
+    .imagenesIngresos{
+        
+    
+        img{
+            background-color: rgb(192, 163, 163);
+            border-color:#7e5861 ;
+            width: 347px;
+            height: 490px;
+            object-fit: cover;
+            transform: scale(0.9);
+            transition: transform 1s ease;
+    
+            p{
+            text-align: center;
+            font-size: 60px;
+            color: antiquewhite;
+            margin: 24px;
+            padding: 15px;
+        }
+        }
+    
+    }
+    
+    
+    .contenedor-imgs-nuevosingresos{
+        display: grid;
+        grid-template-columns: repeat(2,371px);
+        grid-template-rows: repeat(1,578px);
+    }
+    
+    .titulosRopa p{
+        color: rgb(234, 248, 248);
+        font-size: 23px;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    
+    /*footer*/
+    
+    footer .pieDePagina{
+        background-color: #fadb9336;
+        margin-top: 80px;
+        border-radius: 5px;
+        padding: 17px;
+        width: 106%;
+        .mapaGoogle{
+            padding: 20px;
+        }
+        p {
+            font-size: 30px;
+            color: #FFFF;
+            padding: 5px;
+        }
+        
+    }
+    
+    }
+
+/*tablet catalogo.html*/
+@media (max-width:768px) {
+    /*logo de sweetmoban*/
+    .container-img-p{
+        display: flex;
+    }
+    
+    .sweetmoban{
+        display: flex;
+        margin: 13px;
+        flex-direction: row;
+    }
+    
+    .img-logo{
+        margin: -4px;
+    }
+    
+    .contenedor-c-c{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
+    
+    /*contacto*/
+    
+    
+    
+    html{
+        scroll-behavior: smooth;
+    }
+    
+    .imgaFinal1{
+        img{
+            background-color: rgb(217, 146, 146);
+            border-radius: 5%;
+            -webkit-animation: heartbeat 2s ease-in-out  both;
+                animation: heartbeat 2s ease-in-out both;
+            
+                p{
+                    display: none;
+                }
+        }
+    
+    }
+    
+    @-webkit-keyframes heartbeat {
+        from {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-transform-origin: center center;
+            transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+                nimation-timing-function: ease-out;
+        }
+        10% {
+        -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        17% {
+        -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+        33% {
+        -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        45% {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+    }
+    @keyframes heartbeat {
+        from {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-transform-origin: center center;
+            transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+        10% {
+        -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        17% {
+        -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+        33% {
+        -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        45% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+    }
+    
+    
+    /*carrito*/
+    .imgaFinal2 img{
+        background-color: rgb(221, 157, 157);
+        border-radius: 10%;
+        height: 64px;
+        -webkit-animation: heartbeat 2s ease-in-out  both;
+            animation: heartbeat 2s ease-in-out both;
+            p{
+                display: none;
+            }
+    }
+    
+    @-webkit-keyframes heartbeat {
+        from {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-transform-origin: center center;
+            transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+                nimation-timing-function: ease-out;
+        }
+        10% {
+        -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        17% {
+        -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+        33% {
+        -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        45% {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+    }
+    @keyframes heartbeat {
+        from {
+        -webkit-transform: scale(1);
+            transform: scale(1);
+        -webkit-transform-origin: center center;
+            transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+        10% {
+        -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        17% {
+        -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+        33% {
+        -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        45% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+    }
+    
+    /*imgs*/
+    
+    .imagenesCatalogo{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+        
+    .imagenesCatalogo img{
+            object-fit: cover;
+            width: 94%;
+            vertical-align: top;
+            height: 475px;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(192, 163, 163);
+            &:hover{
+                transform:scale(1.1);
+                transition: all 1s ease-in-out;
+                cursor: pointer;
+            }
+    
+            p{
+                color: white;
+                font-size: 25px;
+            }
+        
+        }   
+    }    

@@ -1,0 +1,432 @@
+
+/*index.html(pagina responsive)*/
+body{
+        background-image:url("../assets/img/imgBody2.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+    }
+    /*main index.html*/
+.imagenPortada img{
+    width: 650px;
+    height: 347px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    margin-right: -20px;
+    
+    
+}
+
+/*fotosimagenesingresos*/
+
+.imagenesIngresos{
+    p{
+        text-align: center;
+        font-size: 60px;
+        color: antiquewhite;
+        margin: 24px;
+        padding: 15px;
+    }
+
+}
+
+.contenedor-imgs-nuevosingresos{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+
+.titulosRopa p{
+    color: rgb(234, 248, 248);
+    font-size: 23px;
+    padding: 2px;
+    margin: 2px;
+}
+
+.imagenesIngresos img{
+    background-color: rgb(192, 163, 163);
+    border-color:#7e5861 ;
+    width: 400px;
+    height: 490px;
+    object-fit: cover;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 30px;
+    &:hover{transform:scale(1.1);
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+}}
+
+
+/*metodos de pago*/
+.pagos h1{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 40px;
+}
+
+.pagos img{
+    align-items: center;
+    border-radius: 5rem;
+    height: 100px;
+}
+
+/*registrate para obtener ofertas*/
+.registro h2{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 40px;
+}
+
+#button{
+    padding: 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    border-radius: 10rem;
+    color: rgb(255, 255, 255);
+    background-color: #2B3A55;
+    border-color: #E8C4C4;
+    cursor: pointer;
+}
+
+.buttonIgualaId{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.buttonIgualaId{
+	-webkit-animation: bounce-top 0.9s 2 both;
+	        animation: bounce-top 0.9s 2 both;
+}
+
+@-webkit-keyframes bounce-top {
+    0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    }
+    65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);-webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    }
+    82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);-webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    }
+    93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    }
+    100% {-webkit-transform: translateY(0px);
+    transform: translateY(0px);-webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
+@keyframes bounce-top {
+    0% {
+    -webkit-transform: translateY(-45px);
+             transform: translateY(-45px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      -webkit-transform: translateY(-24px);
+              transform: translateY(-24px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    65% {
+      -webkit-transform: translateY(-12px);
+              transform: translateY(-12px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    82% {
+      -webkit-transform: translateY(-6px);
+              transform: translateY(-6px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    93% {
+      -webkit-transform: translateY(-4px);
+              transform: translateY(-4px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+
+/*imagenesdelcatalogo*/
+.imagenesCatalogo{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        width: 95%;
+        margin: auto;
+        grid-gap: 10px;
+        overflow: hidden;
+            img{
+                object-fit: cover;
+                width: 94%;
+                vertical-align: top;
+                height: 475px;
+                padding: 10px;
+                margin: 10px;
+                background-color: rgb(192, 163, 163);
+                &:hover{
+                    transform:scale(1.1);
+                    transition: all 1s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+            p{
+                color: white;
+                font-size: 25px;
+            }
+    }
+/*sobre-mi.html*/
+.sobreMi h1{
+        text-align: center;
+        color: #FFFF;
+        font-size: 40px;
+    }
+    
+    .sobreMi p {
+        color: #FFFF;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    
+/*informacion.html*/
+    .textoInfo h1{
+        text-align: center;
+        color: #FFFF;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 40px;
+        padding: 20px;
+    }
+    
+    .textoInfo p{
+        text-align: center;
+        color: #FFFF;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 30px;
+        padding: 20px 30px;
+    }
+    
+    .texto2Info h2{
+        text-align: center;
+        color: #FFFF;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 40px;
+        padding: 20px 30px;
+    }
+    
+    .texto2Info p{
+        text-align: center;
+        color: #FFFF;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 30px;
+        
+    }
+    
+    
+    /*login.html*/
+    
+    .formulario{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
+    
+    .titulo1{
+        font-size: 40px;
+        padding: 15px;
+        color: #faf5e7;
+        text-decoration-line: underline;
+        text-align: center;
+        margin: 5px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    
+    .campo1{
+        background-color: #fbeeca4a;
+        
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 29px;
+        margin: 41px;
+        border-radius: 2rem;
+        
+    }
+    
+    .campo1 p{
+        color: #fbfbfb;
+    }
+    
+    span{
+        color: #faf5e7;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    #email {
+        width: 400px;
+        border-radius: .5rem;
+        height: 28px;
+        border-color: #7e5861;
+    
+    }
+    
+    #password {
+        width: 400px;
+        border-radius: .5rem;
+        height: 28px;
+        border-color: #7e5861;
+    }
+    
+    #botonL{
+        padding: 10px 30px;
+        margin-top: 45px;
+        margin-bottom: 13px;
+        border-radius: 10rem;
+        color: rgb(255, 255, 255);
+        background-color: #151b27;
+        border-color: #E8C4C4;
+        cursor: pointer;
+    
+    }
+    
+    #botonL{
+            -webkit-animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                    animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+    
+    @-webkit-keyframes shake-horizontal {
+        0%,
+        100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+        }
+        20%,
+        40%,
+        60% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+        }
+        80% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+        }
+        90% {
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
+        }
+    }
+    
+    
+    @keyframes shake-horizontal {
+        0%,
+        100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+        }
+        20%,
+        40%,
+        60% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+        }
+        80% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+        }
+        90% {
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
+        }
+    }
+    
+    
+    
+    .campo2{
+        background-color: #fff8e74a;
+        padding: 50px;
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 29px;
+        margin: 41px;
+        border-radius: 2rem;
+        
+    }
+    .campo2 p{
+        color: #fbfbfb;
+    }
+    
+        
