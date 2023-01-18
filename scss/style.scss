@@ -220,8 +220,8 @@ header{
     img{
         background-color: rgb(192, 163, 163);
         border-color:#7e5861 ;
-        width: 347px;
-        height: 490px;
+        width: 310px;
+        height: 310px;
         object-fit: cover;
         transform: scale(0.9);
         transition: transform 1s ease;
@@ -456,9 +456,8 @@ footer .pieDePagina{
 }
 
 .contenedor-imgs-nuevosingresos{
-    display: grid;
-    grid-template-columns: repeat(2,371px);
-    grid-template-rows: repeat(1,578px);
+    display: flex;
+    flex-flow: row wrap;
 }
 .titulosRopa p{
     

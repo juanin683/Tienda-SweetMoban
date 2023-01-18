@@ -157,7 +157,7 @@ header {
   margin-right: -20px; }
 
 /*fotosimagenesingresos*/
-.imagenesIngresos
+
 .imagenesIngresos img:hover {
   transform: scale(1.1);
   transition: all 1s ease-in-out;
@@ -167,7 +167,7 @@ header {
   text-align: center;
   font-size: 60px;
   color: antiquewhite;
-  margin: 24px;
+  margin: 23px;
   padding: 15px; }
 
 .contenedor-imgs-nuevosingresos {
@@ -472,9 +472,11 @@ footer .mapaGoogle {
     border-color: #7e5861;
     width: 347px;
     height: 490px;
-    object-fit: cover;
+    object-fit: cover; }
+  .imagenesIngresos img:hover{
     transform: scale(0.9);
-    transition: transform 1s ease; }
+    transition: transform 1s ease;
+  }
     .imagenesIngresos img p {
       text-align: center;
       font-size: 60px;
@@ -482,9 +484,8 @@ footer .mapaGoogle {
       margin: 24px;
       padding: 15px; }
   .contenedor-imgs-nuevosingresos {
-    display: grid;
-    grid-template-columns: repeat(2, 371px);
-    grid-template-rows: repeat(1, 578px); }
+    display: flex;
+    flex-flow: row wrap;}
   .titulosRopa p {
     color: #eaf8f8;
     font-size: 23px;
@@ -618,7 +619,7 @@ footer .mapaGoogle {
     header .navbar-nav {
       padding-right: 10px; }
   /*main*/
-  /*index imagenPortada*/
+  
   /*imagenesIngresos */
   .imagenesIngresos img {
     background-color: #c0a3a3;
@@ -633,15 +634,12 @@ footer .mapaGoogle {
       font-size: 60px;
       color: antiquewhite; }
   .contenedor-imgs-nuevosingresos {
-    display: grid;
-    grid-template-columns: repeat(2, 371px);
-    grid-template-rows: repeat(1, 578px); }
+  }
   .titulosRopa p {
     font-size: 23px;
     padding: 2px;
     margin: 2px;
-    display: grid;
-    grid-template-columns: repeat(autofit, minmax(300px)); } }
+    text-align: start;} }
 
 /*sobre-mi.html*/
 .sobreMi h1 {
