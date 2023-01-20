@@ -250,154 +250,150 @@
 }
 
 
-/*login.html*/
-
-.formulario{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(1,1fr);
-}
-
-.titulo1{
-    font-size: 40px;
-    padding: 15px;
-    color: #faf5e7;
-    text-decoration-line: underline;
-    text-align: center;
-    margin: 5px;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-
-.campo1{
-    background-color: #fbeeca4a;
+/*mobile login.html*/
+@media (max-width:320px) {
+    .formulario{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
     
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 29px;
-    margin: 41px;
-    border-radius: 2rem;
+    .titulo1{
+        font-size: 40px;
+        padding: 15px;
+        color: #faf5e7;
+        text-decoration-line: underline;
+        text-align: center;
+        margin: 5px;
+        font-family: 'Ubuntu', sans-serif;
+    }
     
-}
-
-.campo1 p{
-    color: #fbfbfb;
-}
-
-span{
-    color: #faf5e7;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-#email {
-    width: 400px;
-    border-radius: .5rem;
-    height: 28px;
-    border-color: #7e5861;
-
-}
-
-#password {
-    width: 400px;
-    border-radius: .5rem;
-    height: 28px;
-    border-color: #7e5861;
-}
-
-#botonL{
-    padding: 10px 30px;
-    margin-top: 45px;
-    margin-bottom: 13px;
-    border-radius: 10rem;
-    color: rgb(255, 255, 255);
-    background-color: #151b27;
-    border-color: #E8C4C4;
-    cursor: pointer;
-
-}
-
-#botonL{
+    
+    .campo1{
+        background-color: #fbeeca4a;
+        
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 29px;
+        margin: 41px;
+        border-radius: 2rem;
+        p{
+            color: #fbfbfb;
+        }
+    }
+    
+    span{
+        color: #faf5e7;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    #email {
+        width: 400px;
+        border-radius: .5rem;
+        height: 28px;
+        border-color: #7e5861;
+    
+    }
+    
+    #password {
+        width: 400px;
+        border-radius: .5rem;
+        height: 28px;
+        border-color: #7e5861;
+    }
+    
+    #botonL{
+        padding: 10px 30px;
+        margin-top: 45px;
+        margin-bottom: 13px;
+        border-radius: 10rem;
+        color: rgb(255, 255, 255);
+        background-color: #151b27;
+        border-color: #E8C4C4;
+        cursor: pointer;
         -webkit-animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
-
-@-webkit-keyframes shake-horizontal {
-    0%,
-    100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+                    animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     }
-    10%,
-    30%,
-    50%,
-    70% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    
+    @-webkit-keyframes shake-horizontal {
+        0%,
+        100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+        }
+        20%,
+        40%,
+        60% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+        }
+        80% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+        }
+        90% {
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
+        }
     }
-    20%,
-    40%,
-    60% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    
+    
+    @keyframes shake-horizontal {
+        0%,
+        100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+        }
+        20%,
+        40%,
+        60% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+        }
+        80% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+        }
+        90% {
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
+        }
     }
-    80% {
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
+    
+    
+    
+    .campo2{
+        background-color: #fff8e74a;
+        padding: 50px;
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 29px;
+        margin: 41px;
+        border-radius: 2rem;
+        p{
+            color: #fbfbfb;
+        }
     }
-    90% {
-    -webkit-transform: translateX(-8px);
-            transform: translateX(-8px);
-    }
-}
-
-
-@keyframes shake-horizontal {
-    0%,
-    100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    }
-    10%,
-    30%,
-    50%,
-    70% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
-    }
-    20%,
-    40%,
-    60% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-    }
-    80% {
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
-    }
-    90% {
-    -webkit-transform: translateX(-8px);
-            transform: translateX(-8px);
-    }
-}
-
-
-
-.campo2{
-    background-color: #fff8e74a;
-    padding: 50px;
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 29px;
-    margin: 41px;
-    border-radius: 2rem;
     
 }
-.campo2 p{
-    color: #fbfbfb;
-}
+
 /*mobile catalogo.html*/
 
 @media (max-width:320px){
@@ -605,7 +601,7 @@ span{
             padding: 10px;
             margin: 10px;
             background-color: rgb(192, 163, 163);
-            &hover{
+            &:hover{
                 transform:scale(1.1);
                 transition: all 1s ease-in-out;
                 cursor: pointer;

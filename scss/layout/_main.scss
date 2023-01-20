@@ -1,13 +1,13 @@
-
 /*index.html(pagina responsive)*/
 body{
-        background-image:url("../assets/img/imgBody2.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        width: 100%;
-    }
-    /*main index.html*/
+    background-image:url("../assets/img/imgBody2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+/*main index.html*/
 .imagenPortada img{
     width: 650px;
     height: 347px;
@@ -20,7 +20,6 @@ body{
 }
 
 /*fotosimagenesingresos*/
-
 .imagenesIngresos{
     p{
         text-align: center;
@@ -29,7 +28,6 @@ body{
         margin: 24px;
         padding: 15px;
     }
-
 }
 
 .contenedor-imgs-nuevosingresos{
@@ -37,7 +35,6 @@ body{
     flex-flow: row wrap;
 
 }
-
 
 .titulosRopa p{
     color: rgb(234, 248, 248);
@@ -62,16 +59,17 @@ body{
 
 
 /*metodos de pago*/
-.pagos h1{
-    text-align: center;
-    color: antiquewhite;
-    font-size: 40px;
-}
-
-.pagos img{
-    align-items: center;
-    border-radius: 5rem;
-    height: 100px;
+.pagos {
+    h1{
+        text-align: center;
+        color: antiquewhite;
+        font-size: 40px;
+    }
+    img{
+        align-items: center;
+        border-radius: 5rem;
+        height: 100px;
+    }
 }
 
 /*registrate para obtener ofertas*/
@@ -100,7 +98,7 @@ body{
 
 .buttonIgualaId{
 	-webkit-animation: bounce-top 0.9s 2 both;
-	        animation: bounce-top 0.9s 2 both;
+	    animation: bounce-top 0.9s 2 both;
 }
 
 @-webkit-keyframes bounce-top {
@@ -206,8 +204,7 @@ body{
 
 /*imagenesdelcatalogo*/
 .imagenesCatalogo{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        @include grid(repeat(auto-fit, minmax(350px, 1fr)));
         width: 95%;
         margin: auto;
         grid-gap: 10px;
@@ -232,54 +229,55 @@ body{
             }
     }
 /*sobre-mi.html*/
-.sobreMi h1{
+.sobreMi {
+    h1{
         text-align: center;
         color: #FFFF;
         font-size: 40px;
     }
-    
-    .sobreMi p {
+    p {
         color: #FFFF;
         text-align: center;
         font-size: 25px;
         margin-top: 40px;
         margin-bottom: 15px;
     }
-    
+}
+
 /*informacion.html*/
-    .textoInfo h1{
-        text-align: center;
-        color: #FFFF;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 40px;
-        padding: 20px;
+    .textoInfo {
+        h1{
+            text-align: center;
+            color: #FFFF;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 40px;
+            padding: 20px;
+        }
+        p{
+            text-align: center;
+            color: #FFFF;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 30px;
+            padding: 20px 30px;
+        }
     }
     
-    .textoInfo p{
-        text-align: center;
-        color: #FFFF;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 30px;
-        padding: 20px 30px;
+    .texto2Info {
+        h2{
+            text-align: center;
+            color: #FFFF;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 40px;
+            padding: 20px 30px;
+        }
+        p{
+            text-align: center;
+            color: #FFFF;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 30px;
+            
+        }
     }
-    
-    .texto2Info h2{
-        text-align: center;
-        color: #FFFF;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 40px;
-        padding: 20px 30px;
-    }
-    
-    .texto2Info p{
-        text-align: center;
-        color: #FFFF;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 30px;
-        
-    }
-    
-    
     /*login.html*/
     
     .formulario{
@@ -298,7 +296,6 @@ body{
         font-family: 'Ubuntu', sans-serif;
     }
     
-    
     .campo1{
         background-color: #fbeeca4a;
         
@@ -308,13 +305,11 @@ body{
         padding: 29px;
         margin: 41px;
         border-radius: 2rem;
-        
+        p{
+            color: #fbfbfb;
+        }
     }
-    
-    .campo1 p{
-        color: #fbfbfb;
-    }
-    
+
     span{
         color: #faf5e7;
         display: flex;
@@ -330,10 +325,7 @@ body{
     }
     
     #password {
-        width: 400px;
-        border-radius: .5rem;
-        height: 28px;
-        border-color: #7e5861;
+        @extend #email
     }
     
     #botonL{
@@ -345,14 +337,11 @@ body{
         background-color: #151b27;
         border-color: #E8C4C4;
         cursor: pointer;
-    
-    }
-    
-    #botonL{
-            -webkit-animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+
+        -webkit-animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
                     animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    }
     
+    }
     @-webkit-keyframes shake-horizontal {
         0%,
         100% {
@@ -423,10 +412,14 @@ body{
         padding: 29px;
         margin: 41px;
         border-radius: 2rem;
-        
+        p{
+            color: #fbfbfb;
+        }
     }
-    .campo2 p{
-        color: #fbfbfb;
-    }
-    
-        
+
+
+/*imgejemplo.html*/
+.blazer{
+    color: #fef9bd;
+}
+
