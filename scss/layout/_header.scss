@@ -4,13 +4,14 @@ header{
     background-color: rgb(155, 90, 90);
     opacity: 0.6;
     align-items: center;
-    @include header ((grid-template-columns: auto));
-    
+    display: grid;
+        grid-template-columns: auto;
     .container-fluid{
         background-color: rgb(238, 150, 150);
         height: 50%;
         align-items: center;
-        @include header ((grid-template-columns: auto));
+        display: grid;
+        grid-template-columns: auto;
     }
 
     /*logo */
@@ -181,9 +182,8 @@ header{
                 font-family: Helvetica;
                 margin: 7px;
                 padding: 7px 11px;
-                @include grid 
-                ((grid-template-columns: repeat(3, 35px)
-                grid-template-rows: 46px))
+                @include grid ((grid-template-columns: repeat(3, 35px), grid-template-rows: 46px));
+                
                 
             }
 }
@@ -217,6 +217,4 @@ header{
     height: 5px;
     display: block;
 }
-
-
     }}

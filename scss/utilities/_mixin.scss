@@ -1,15 +1,13 @@
 /*index.html*/
-@mixin header ($col){
-    display:grid;
-    grid-template-columns: $col;
-}
 
-
-
-
-/**/
-@mixin grid ($col, $rows){
+@mixin grid ($col, $row){
     display: grid;
     grid-template-columns: $col;
-    grid-template-rows: $rows;
+    grid-template-rows: $row;
+}
+
+@mixin flex(){
+    display: flex;
+    flex-direction: $direct;
+    flex-wrap: $wrap;
 }
