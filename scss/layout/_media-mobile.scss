@@ -1,7 +1,5 @@
 /*mobile index.html*/
-
 @media(max-width: 320px) {
-
     body{
         background-image: url("../assets/img/imgBody2.png") ;
         background-repeat: no-repeat;
@@ -16,54 +14,52 @@
         align-items: center;
         width: 106%;
         position: relative;
-    
-    
-        /*logo */
-        .sombrerito a img{
-            position: absolute;
-            width: 100px;
-            padding: 5px;
-            bottom: 85%;
-            margin: 5px;
-            
+/*logo */
+    .sombrerito {
+        a{
+            img{
+                position: absolute;
+                width: 100px;
+                padding: 5px;
+                bottom: 85%;
+                margin: 5px;
         }
-        /*sweet moban*/
-        .sombrerito p{
-            color: #FFFF;
-            display: grid;
-            grid-template-columns: repeat(2,100px);
-            grid-template-rows: repeat(2,29px);
-            padding-left: 65px;
-            
-        }
+    }
+    p{
+        color: #FFFF;
+        display: grid;
+        @include grid(repeat(2,100px), repeat(2,29px));
+        padding-left: 65px;
     
-        /*contenedorcontactoycarrito*/
-        .contenedor-c-c{
-            padding: 20px;
-            margin-top: -20px;
-        }
-        /*contacto*/
-        .imgaFinal1 img{
-            background-color: rgb(217, 146, 146);
-            border-radius: 7%;
-            width: 60px;
-            height: 60px;
-        }
-    
-        html{
-            scroll-behavior: smooth;
-        }
-    
-        .imgaFinal1{
-            margin-right: 20px;
-        }
-    
-        .imgaFinal1 img{ 
-            -webkit-animation: heartbeat 2s ease-in-out  both;
-                animation: heartbeat 2s ease-in-out both;
-        }
-    
-        @-webkit-keyframes heartbeat {
+    }
+    }
+    /*contenedorcontactoycarrito*/
+    .contenedor-c-c{
+        padding: 20px;
+        margin-top: -20px;
+    }
+    /*contacto*/
+    .imgaFinal1 img{
+        background-color: rgb(217, 146, 146);
+        border-radius: 7%;
+        width: 60px;
+        height: 60px;
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    .imgaFinal1{
+        margin-right: 20px;
+    }
+
+    .imgaFinal1 img{ 
+        -webkit-animation: heartbeat 2s ease-in-out  both;
+            animation: heartbeat 2s ease-in-out both;
+    }
+
+    @-webkit-keyframes heartbeat {
             from {
             -webkit-transform: scale(1);
                 transform: scale(1);
@@ -130,28 +126,27 @@
             -webkit-animation-timing-function: ease-out;
                     animation-timing-function: ease-out;
             }
+    }
+
+    .imgaFinal1 p{
+        display: none;
+    }
+
+    /*carrito*/
+    .imgaFinal2{
+        img{
+            background-color: rgb(221, 157, 157);
+            border-radius: 10%;
+            height: 60px;
         }
-    
-        .imgaFinal1 p{
+        p{
             display: none;
         }
+    }
     
-        /*carrito*/
-        .imgaFinal2{
-            img{
-                background-color: rgb(221, 157, 157);
-                border-radius: 10%;
-                height: 60px;
-            }
-
-            p{
-                display: none;
-            }
-        }
-
-        /*navbar*/
-        .navbar-nav{
-            padding-right:10px;
+    /*navbar*/
+    .navbar-nav{
+        padding-right:10px;
         }
     }
 /*main*/
@@ -176,12 +171,9 @@
 }
 
 .contenedor-imgs-nuevosingresos{
-    display: grid;
-    grid-template-columns: repeat(2,371px);
-    grid-template-rows: repeat(1,578px);
+    @include grid (repeat(2,371px), repeat(1,578px));
 }
 .titulosRopa p{
-    
     font-size: 23px;
     padding: 2px;
     margin: 2px;
@@ -194,14 +186,11 @@
 
 /*mobile sobre-mi.html*/
 /*sobre-mi.html*/
-
 @media (max-width:320px) {
     .sobreMi h1{
         text-align: center;
         color: #FFFF;
         font-size: 40px;
-
-    
     p {
         color: #FFFF;
         text-align: center;
@@ -212,50 +201,47 @@
 }
 }
 
-
 /*mobile informacion.html*/
 @media (max-width:320px) {
+    .textoInfo {
+        h1{
+            text-align: center;
+            color: #FFFF;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 40px;
+            padding: 20px;
+        }
+        p{
+            text-align: center;
+            color: #FFFF;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 30px;
+            padding: 20px 30px;
+        }
+    }
     
+    .texto2Info {
+        h2{
+            text-align: center;
+            color: #FFFF;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 40px;
+            padding: 20px 30px;
+        }
+        p{
+            text-align: center;
+            color: #FFFF;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 30px;
+            
+        }
+    }
 }
-.textoInfo h1{
-    text-align: center;
-    color: #FFFF;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 40px;
-    padding: 20px;
-}
-
-.textoInfo p{
-    text-align: center;
-    color: #FFFF;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 30px;
-    padding: 20px 30px;
-}
-
-.texto2Info h2{
-    text-align: center;
-    color: #FFFF;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 40px;
-    padding: 20px 30px;
-}
-
-.texto2Info p{
-    text-align: center;
-    color: #FFFF;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 30px;
-    
-}
-
 
 /*mobile login.html*/
 @media (max-width:320px) {
     .formulario{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(1,1fr);
+        @include grid (repeat(1,1fr), repeat(1,1fr));
     }
     
     .titulo1{
@@ -267,8 +253,7 @@
         margin: 5px;
         font-family: 'Ubuntu', sans-serif;
     }
-    
-    
+
     .campo1{
         background-color: #fbeeca4a;
         
@@ -282,28 +267,23 @@
             color: #fbfbfb;
         }
     }
-    
     span{
         color: #faf5e7;
         display: flex;
         flex-direction: row-reverse;
     }
-    
     #email {
         width: 400px;
         border-radius: .5rem;
         height: 28px;
         border-color: #7e5861;
-    
     }
-    
     #password {
         width: 400px;
         border-radius: .5rem;
         height: 28px;
         border-color: #7e5861;
     }
-    
     #botonL{
         padding: 10px 30px;
         margin-top: 45px;
@@ -395,18 +375,14 @@
 }
 
 /*mobile catalogo.html*/
-
 @media (max-width:320px){
     .container-img-p{
     display: flex;
     }
-    
     .sweetmoban{
         display: flex;
-        margin: 13px;
-        
         flex-direction: row;
-    
+        margin: 13px;
     }
     
     .img-logo{
@@ -414,9 +390,7 @@
     }
     
     .contenedor-c-c{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(1,1fr);
+        @include grid (repeat(2,1fr), repeat(1,1fr));
     }
     
     /*contacto*/
@@ -588,16 +562,14 @@
     
     /*imgs*/
     .imagenesCatalogo{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr);
+        @include grid (repeat(2,1fr),repeat(2,1fr));
     }
         
     .imagenesCatalogo img{
             object-fit: cover;
-            width: 94%;
+            width: 88%;
             vertical-align: top;
-            height: 475px;
+            height: 400px;
             padding: 10px;
             margin: 10px;
             background-color: rgb(192, 163, 163);
@@ -606,12 +578,9 @@
                 transition: all 1s ease-in-out;
                 cursor: pointer;
             }
-    
             p{
                 color: white;
                 font-size: 25px;
             }
-        
         }   
     }
-    

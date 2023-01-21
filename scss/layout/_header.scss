@@ -5,7 +5,7 @@ header{
     opacity: 0.6;
     align-items: center;
     display: grid;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     .container-fluid{
         background-color: rgb(238, 150, 150);
         height: 50%;
@@ -15,34 +15,33 @@ header{
     }
 
     /*logo */
-    .sombrerito a img{
-        position: absolute;
-        width: 100px;
-        padding: 5px;
-        bottom: 82%;
-        margin: 2px;
-        
+    .sombrerito {
+        a{
+            img{
+                position: absolute;
+                width: 100px;
+                padding: 5px;
+                bottom: 85%;
+                margin: 5px;
+        }
     }
-
-    /*sweet moban*/
-    .sombrerito p{
+    p{
         color: #FFFF;
-        position: absolute;
-        left:9%;
-        bottom: 87%;
-        font-size: 35px;
-        margin: 5px;
+        display: grid;
+        @include grid(repeat(2,100px), repeat(2,29px));
+        padding-left: 65px;
+    
+    }
     }
 
     /*container contacto carrito*/
     .contenedor-c-c{
         display: flex;
+        flex-direction: column;
         position: absolute;
         top: 37px;
         right: 117px;
         margin: -30px;
-        flex-direction: column;
-        
     }
 
 
@@ -58,7 +57,7 @@ header{
         -webkit-animation: heartbeat 2s ease-in-out  both;
             animation: heartbeat 2s ease-in-out both;
     }
-    .imgaFinal1{
+    
     @-webkit-keyframes heartbeat {
         from {
         -webkit-transform: scale(1);
@@ -130,18 +129,15 @@ header{
 
 
     .imgaFinal1 p{
-        display: flex;
-        flex-direction: row-reverse;
+        @include flex(row, wrap);
         font-size: 20px;
-        /*color: #FFFF;*/
         padding-top: 24px;
         padding-right: 10px;
     }
 
     /*carrito*/
     .imgaFinal2{
-        display: flex;
-        flex-direction: row-reverse;
+        @include carrito (row-reverse);
         margin-right: -4px;
         padding: 6px;
         margin-top: -14px;
@@ -152,12 +148,11 @@ header{
             }
 
             p{
-                display: flex;
-                flex-direction: row-reverse;
+                @include carrito(row-reverse);
                 padding-top: 19px;
                 padding-right: 30px;
                 font-size: 20px;
-                /*color: #FFFF;*/
+                
             }
 
 }
@@ -168,10 +163,7 @@ header{
     color: rgb(241, 241, 226);
     font-weight: 50px;
     text-decoration: none;
-    
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+    @include navBarStyle (center, row);
     list-style: none;
         li{
             a{
@@ -182,22 +174,18 @@ header{
                 font-family: Helvetica;
                 margin: 7px;
                 padding: 7px 11px;
-                @include grid ((grid-template-columns: repeat(3, 35px), grid-template-rows: 46px));
-                
-                
+                @include grid (repeat(3, 35px),46px);
             }
+        }
 }
+
 }
 
-
-
-/*catalogo.html(pagina responsive)*/
 .container-img-p{
     display: flex;
     margin: 10px;
     padding: 10px;
 }
-
 .sweetmoban{
     display: flex;
     margin: 13px;
@@ -205,16 +193,13 @@ header{
     flex-direction: row;
 
 }
-
 .img-logo{
     margin: -4px;
 }
-
-
 .linea{
     background-color: purple;
     width: 100%;
     height: 5px;
     display: block;
 }
-    }}
+
