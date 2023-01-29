@@ -407,11 +407,10 @@ body {
 
 .campo1, .campo2 {
   background-color: #fbeeca4a;
-  font-size: 20px;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
-  padding: 29px;
-  margin: 41px;
+  padding: 5px;
+  margin: 18px;
   border-radius: 2rem; }
   .campo1 p, .campo2 p {
     color: #fbfbfb; }
@@ -1163,8 +1162,9 @@ footer .contenedor-ig-wsp {
       color: #fbfbfb; }
   #email, #password, #password {
     border-radius: .5rem;
-    height: 28px;
-    border-color: #7e5861; }
+    height: 34px;
+    border-color: #7e5861;
+    width: 241px; }
   #botonL {
     padding: 10px 30px;
     margin-top: 45px;
@@ -1545,12 +1545,12 @@ footer .contenedor-ig-wsp {
     .campo1 p, .campo2 p {
       color: #fbfbfb; }
   #email, #password {
-    width: 265px;
+    width: 240px;
     border-radius: .5rem;
     border-color: #7e5861;
     height: 50px; }
   #password {
-    width: 265px;
+    width: 240px;
     border-radius: .5rem;
     border-color: #7e5861;
     height: 50px; }
@@ -1796,7 +1796,7 @@ footer .contenedor-ig-wsp {
     height: 300px; }
   footer .contenedor-ig-wsp {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: row; } }
 
 /*footer para mobile*/
 @media (max-width: 320px) {
@@ -1815,4 +1815,4 @@ footer .contenedor-ig-wsp {
     height: 300px; }
   footer .contenedor-ig-wsp {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: row; } }

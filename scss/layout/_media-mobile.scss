@@ -433,13 +433,13 @@
     }
     
     #email {
-        width: 265px;
+        width: 240px;
         border-radius: .5rem;
         border-color: #7e5861;
         height: 50px;
     }
     #password {
-        width: 265px;
+        width: 240px;
         border-radius: .5rem;
         border-color: #7e5861;
         height: 50px;
@@ -757,7 +757,7 @@
             }
             .contenedor-ig-wsp{
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
             }
         }           
     }
@@ -783,7 +783,7 @@ footer {
     }
     .contenedor-ig-wsp{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 }
