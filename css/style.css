@@ -43,7 +43,7 @@ header {
   header .imgaFinal1 {
     display: flex;
     flex-direction: row-reverse;
-    height: 80px;
+    height: 70px;
     -webkit-animation: heartbeat 2s ease-in-out  both;
     animation: heartbeat 2s ease-in-out both; }
     header .imgaFinal1 img {
@@ -120,7 +120,7 @@ header {
     flex-direction: row-reverse;
     margin-right: -4px;
     padding: 6px;
-    margin-top: -14px; }
+    margin-top: -8px; }
     header .imgaFinal2 img {
       background-color: #f17e7e;
       border-radius: 10%;
@@ -173,27 +173,19 @@ header {
 
 /*index.html(pagina responsive)*/
 body {
-  background-image: url("../assets/img/imgBody2.png");
+  background-image: url("../assets/img/mujersentada.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  width: 100%; }
+  width: auto; }
 
 /*main index.html*/
-.imagenPortada img {
-  width: 650px;
-  height: 347px;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  margin-top: 16px;
-  margin-right: -20px; }
-
 /*fotosimagenesingresos*/
 .imagenesIngresos p {
   text-align: center;
-  font-size: 60px;
-  color: antiquewhite;
-  margin: 24px;
+  font-size: 40px;
+  color: #f5f8ce;
+  margin: 2px;
   padding: 15px; }
 
 .contenedor-imgs-nuevosingresos {
@@ -353,9 +345,9 @@ body {
   overflow: hidden; }
   .imagenesCatalogo img {
     object-fit: cover;
-    width: 94%;
+    width: 300px;
     vertical-align: top;
-    height: 475px;
+    height: 413px;
     padding: 10px;
     margin: 10px;
     background-color: #c0a3a3; }
@@ -381,39 +373,29 @@ body {
   margin-bottom: 15px; }
 
 /*informacion.html*/
-.textoInfo h1 {
-  text-align: center;
-  color: #FFFF;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 40px;
-  padding: 20px; }
-
-.textoInfo p {
+.textoInfo h1, .texto2Info h1 {
   text-align: center;
   color: #FFFF;
   font-family: 'Ubuntu', sans-serif;
   font-size: 30px;
+  padding: 20px; }
+
+.textoInfo p, .texto2Info p {
+  text-align: center;
+  color: #FFFF;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
   padding: 20px 30px; }
 
 .texto2Info h2 {
+  padding: 20px 30px;
   text-align: center;
-  color: #FFFF;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 40px;
-  padding: 20px 30px; }
+  color: #FFFF; }
 
 .texto2Info p {
-  text-align: center;
-  color: #FFFF;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 30px; }
+  padding: 20px 30px; }
 
 /*login.html*/
-.formulario {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr); }
-
 .titulo1 {
   font-size: 30px;
   padding: 15px;
@@ -423,7 +405,7 @@ body {
   margin: 5px;
   font-family: 'Ubuntu', sans-serif; }
 
-.campo1 {
+.campo1, .campo2 {
   background-color: #fbeeca4a;
   font-size: 20px;
   text-align: center;
@@ -431,24 +413,19 @@ body {
   padding: 29px;
   margin: 41px;
   border-radius: 2rem; }
-  .campo1 p {
+  .campo1 p, .campo2 p {
     color: #fbfbfb; }
 
-span {
-  color: #faf5e7;
-  display: flex;
-  flex-direction: row-reverse; }
-
 #email, #password {
-  width: 400px;
+  width: 327px;
   border-radius: .5rem;
   height: 28px;
   border-color: #7e5861; }
 
 #botonL {
-  padding: 10px 30px;
   margin-top: 45px;
   margin-bottom: 13px;
+  padding: 10px 30px;
   border-radius: 10rem;
   color: white;
   background-color: #151b27;
@@ -503,17 +480,8 @@ span {
     -webkit-transform: translateX(-8px);
     transform: translateX(-8px); } }
 
-.campo2 {
-  background-color: #fff8e74a;
-  padding: 50px;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Ubuntu', sans-serif;
-  padding: 29px;
-  margin: 41px;
-  border-radius: 2rem; }
-  .campo2 p {
-    color: #fbfbfb; }
+.campo2 p {
+  color: #fbfbfb; }
 
 /*imgejemplo.html*/
 .blazer {
@@ -532,22 +500,26 @@ footer p {
 
 footer .mapaGoogle {
   padding: 20px;
-  height: 300px;
-  width: 300px; }
+  width: 400px;
+  height: 400px; }
+
+footer .contenedor-ig-wsp {
+  display: flex;
+  flex-direction: row; }
 
 /*tablet(index.html)*/
 @media (max-width: 768px) {
   body {
-    background-image: url("../assets/img/imgBody2.png");
+    background-image: url("../assets/img/mujersentada.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    width: 700px; }
+    width: auto; }
   header {
     background-color: #8c3c3c;
     opacity: 0.6;
     align-items: center;
-    width: 106%;
+    width: auto;
     position: relative;
     /*logo */
     /*contenedorcontactoycarrito*/
@@ -569,6 +541,7 @@ footer .mapaGoogle {
     header .contenedor-c-c {
       padding: 20px;
       margin-top: -20px;
+      margin-left: 20px;
       display: flex;
       flex-direction: row;
       position: absolute;
@@ -668,12 +641,12 @@ footer .mapaGoogle {
     object-fit: cover;
     transform: scale(0.9);
     transition: transform 1s ease; }
-    .imagenesIngresos img p {
-      text-align: center;
-      font-size: 60px;
-      color: antiquewhite;
-      margin: 24px;
-      padding: 15px; }
+  .imagenesIngresos p {
+    text-align: center;
+    font-size: 30px;
+    color: antiquewhite;
+    margin: 3px;
+    padding: 8px; }
   .contenedor-imgs-nuevosingresos {
     display: grid;
     grid-template-columns: repeat(2, 371px);
@@ -689,13 +662,13 @@ footer .mapaGoogle {
     margin-top: 80px;
     border-radius: 5px;
     padding: 17px;
-    width: 106%; }
-    footer .pieDePagina .mapaGoogle {
-      padding: 20px; }
-    footer .pieDePagina p {
-      font-size: 30px;
-      color: #FFFF;
-      padding: 5px; } }
+    width: auto; }
+  .mapaGoogle {
+    padding: 20px; }
+  p {
+    font-size: 30px;
+    color: #FFFF;
+    padding: 5px; } }
 
 /*tablet sobremi.html*/
 /*sobremi*/
@@ -704,7 +677,7 @@ footer .mapaGoogle {
     background-color: #8c3c3c;
     opacity: 0.6;
     align-items: center;
-    width: 106%;
+    width: auto;
     position: relative;
     /*logo */
     /*sweet moban*/
@@ -724,9 +697,12 @@ footer .mapaGoogle {
       grid-template-columns: repeat(2, 100px);
       grid-template-rows: repeat(2, 29px);
       padding-left: 65px; }
+    header .sweetmoban {
+      display: none; }
     header .contenedor-c-c {
       padding: 20px;
       margin-top: -20px;
+      margin-bottom: 20px;
       display: flex;
       flex-direction: row;
       position: absolute;
@@ -825,7 +801,23 @@ footer .mapaGoogle {
     text-align: center;
     font-size: 25px;
     margin-top: 40px;
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  footer .pieDePagina {
+    background-color: #fadb9336;
+    margin-top: 73px;
+    border-radius: 5px;
+    padding: 5px; }
+  footer p {
+    font-size: 30px;
+    color: #FFFF;
+    padding: 5px; }
+  footer .mapaGoogle {
+    padding: 20px;
+    width: 275px;
+    height: 300px; }
+  footer .contenedor-ig-wsp {
+    display: flex;
+    flex-direction: row; } }
 
 /*tablet catalogo.html*/
 @media (max-width: 768px) {
@@ -994,21 +986,22 @@ footer .mapaGoogle {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr); }
-  .imagenesCatalogo img {
-    object-fit: cover;
-    width: 88%;
-    vertical-align: top;
-    height: 400px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #c0a3a3; }
-    .imagenesCatalogo img:hover {
-      transform: scale(1.1);
-      transition: all 1s ease-in-out;
-      cursor: pointer; }
-    .imagenesCatalogo img p {
+    .imagenesCatalogo img {
+      object-fit: cover;
+      width: 90%;
+      vertical-align: top;
+      height: 400px;
+      padding: 10px;
+      margin: 10px;
+      background-color: #c0a3a3; }
+      .imagenesCatalogo img:hover {
+        transform: scale(1.1);
+        transition: all 1s ease-in-out;
+        cursor: pointer; }
+    .imagenesCatalogo p {
       color: white;
-      font-size: 25px; } }
+      font-size: 25px;
+      margin: 20px; } }
 
 /*informacion.html*/
 @media (max-width: 768px) {
@@ -1016,7 +1009,7 @@ footer .mapaGoogle {
     background-color: #8c3c3c;
     opacity: 0.6;
     align-items: center;
-    width: 106%;
+    width: auto;
     position: relative;
     /*logo */
     /*sweet moban*/
@@ -1038,13 +1031,13 @@ footer .mapaGoogle {
       padding-left: 65px; }
     header .contenedor-c-c {
       padding: 20px;
-      margin-top: -20px;
+      margin-top: -29px;
+      margin-right: -63px;
       display: flex;
       flex-direction: row;
       position: absolute;
       top: 37px;
-      right: 117px;
-      margin: -30px; }
+      right: 117px; }
     header html {
       scroll-behavior: smooth; }
     header .imgaFinal1 {
@@ -1128,13 +1121,13 @@ footer .mapaGoogle {
         display: none; }
     header .navbar-nav {
       padding-right: 10px; }
-  .textoInfo h1 {
+  .textoInfo h1, .texto2Info h1 {
     text-align: center;
     color: #FFFF;
     font-family: 'Ubuntu', sans-serif;
     font-size: 40px;
     padding: 20px; }
-  .textoInfo p {
+  .textoInfo p, .texto2Info p {
     text-align: center;
     color: #FFFF;
     font-family: 'Ubuntu', sans-serif;
@@ -1154,10 +1147,6 @@ footer .mapaGoogle {
 
 /*login.html*/
 @media (max-width: 768px) {
-  .formulario {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr); }
   .titulo1 {
     font-size: 40px;
     padding: 15px;
@@ -1166,27 +1155,13 @@ footer .mapaGoogle {
     text-align: center;
     margin: 5px;
     font-family: 'Ubuntu', sans-serif; }
-  .campo1 {
+  .campo1, .campo2 {
     background-color: #fbeeca4a;
-    font-size: 30px;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 29px;
-    margin: 41px;
     border-radius: 2rem; }
-    .campo1 p {
+    .campo1 p, .campo2 p {
       color: #fbfbfb; }
-  span {
-    color: #faf5e7;
-    display: flex;
-    flex-direction: row-reverse; }
   #email, #password, #password {
-    width: 400px;
-    border-radius: .5rem;
-    height: 28px;
-    border-color: #7e5861; }
-  #password {
-    width: 400px;
     border-radius: .5rem;
     height: 28px;
     border-color: #7e5861; }
@@ -1247,12 +1222,7 @@ footer .mapaGoogle {
       transform: translateX(-8px); } }
   .campo2 {
     background-color: #fff8e74a;
-    padding: 50px;
-    font-size: 30px;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 29px;
-    margin: 41px;
     border-radius: 2rem; }
     .campo2 p {
       color: #fbfbfb; } }
@@ -1260,16 +1230,16 @@ footer .mapaGoogle {
 /*mobile index.html*/
 @media (max-width: 320px) {
   body {
-    background-image: url("../assets/img/imgBody2.png");
+    background-image: url("../assets/img/mujersentada.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    width: 700px; }
+    width: auto; }
   header {
     background-color: #8c3c3c;
     opacity: 0.6;
     align-items: center;
-    width: 106%;
+    width: auto;
     position: relative;
     /*logo */
     /*contenedorcontactoycarrito*/
@@ -1291,12 +1261,13 @@ footer .mapaGoogle {
       padding-left: 65px; }
     header .contenedor-c-c {
       padding: 20px;
-      margin-top: -20px; }
+      margin-top: 52px;
+      margin-right: -64px; }
     header .imgaFinal1 img {
       background-color: #d99292;
       border-radius: 7%;
-      width: 60px;
-      height: 60px; }
+      width: 51px;
+      height: 59px; }
     header html {
       scroll-behavior: smooth; }
     header .imgaFinal1 {
@@ -1365,7 +1336,7 @@ footer .mapaGoogle {
     header .imgaFinal2 img {
       background-color: #dd9d9d;
       border-radius: 10%;
-      height: 60px; }
+      height: 58px; }
     header .imgaFinal2 p {
       display: none; }
     header .navbar-nav {
@@ -1375,15 +1346,15 @@ footer .mapaGoogle {
   .imagenesIngresos img {
     background-color: #c0a3a3;
     border-color: #7e5861;
-    width: 347px;
-    height: 490px;
+    width: 300px;
+    height: 300px;
     object-fit: cover; }
     .imagenesIngresos img:hover {
       transform: scale(0.9);
       transition: transform 1s ease; }
     .imagenesIngresos img p {
       text-align: center;
-      font-size: 60px;
+      font-size: 30px;
       color: antiquewhite; }
   .contenedor-imgs-nuevosingresos {
     display: grid;
@@ -1399,6 +1370,112 @@ footer .mapaGoogle {
 /*mobile sobre-mi.html*/
 /*sobre-mi.html*/
 @media (max-width: 320px) {
+  header {
+    background-color: #8c3c3c;
+    opacity: 0.6;
+    align-items: center;
+    width: auto;
+    position: relative;
+    /*logo */
+    /*contenedorcontactoycarrito*/
+    /*contacto*/
+    /*carrito*/
+    /*navbar*/ }
+    header .sombrerito a img {
+      position: absolute;
+      width: 100px;
+      padding: 5px;
+      bottom: 85%;
+      margin: 5px; }
+    header .sombrerito p {
+      color: #FFFF;
+      display: grid;
+      display: grid;
+      grid-template-columns: repeat(2, 100px);
+      grid-template-rows: repeat(2, 29px);
+      padding-left: 65px; }
+    header .contenedor-c-c {
+      padding: 20px;
+      margin-top: -24px;
+      margin-right: -64px; }
+    header .imgaFinal1 img {
+      background-color: #d99292;
+      border-radius: 7%;
+      width: 51px;
+      height: 59px; }
+    header html {
+      scroll-behavior: smooth; }
+    header .imgaFinal1 {
+      margin-right: 20px; }
+    header .imgaFinal1 img {
+      -webkit-animation: heartbeat 2s ease-in-out  both;
+      animation: heartbeat 2s ease-in-out both; }
+  @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      nimation-timing-function: ease-out; }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in; }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out; }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in; }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out; } }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out; }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in; }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out; }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in; }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out; } }
+    header .imgaFinal1 p {
+      display: none; }
+    header .imgaFinal2 img {
+      background-color: #dd9d9d;
+      border-radius: 10%;
+      height: 58px; }
+    header .imgaFinal2 p {
+      display: none; }
+    header .navbar-nav {
+      padding-right: 10px; }
   .sobreMi h1 {
     text-align: center;
     color: #FFFF;
@@ -1412,13 +1489,13 @@ footer .mapaGoogle {
 
 /*mobile informacion.html*/
 @media (max-width: 320px) {
-  .textoInfo h1 {
+  .textoInfo h1, .texto2Info h1 {
     text-align: center;
     color: #FFFF;
     font-family: 'Ubuntu', sans-serif;
     font-size: 40px;
     padding: 20px; }
-  .textoInfo p {
+  .textoInfo p, .texto2Info p {
     text-align: center;
     color: #FFFF;
     font-family: 'Ubuntu', sans-serif;
@@ -1434,46 +1511,49 @@ footer .mapaGoogle {
     text-align: center;
     color: #FFFF;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 30px; } }
+    font-size: 30px; }
+  footer .pieDePagina {
+    background-color: #fadb9336;
+    margin-top: 73px;
+    border-radius: 5px;
+    padding: 4px; }
+  footer p {
+    font-size: 30px;
+    color: #FFFF;
+    padding: 5px; }
+  footer .mapaGoogle {
+    padding: 20px;
+    width: 300px;
+    height: 300px; }
+  footer .contenedor-ig-wsp {
+    display: flex;
+    flex-direction: row; } }
 
 /*mobile login.html*/
 @media (max-width: 320px) {
-  .formulario {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr); }
   .titulo1 {
     font-size: 40px;
-    padding: 15px;
     color: #faf5e7;
     text-decoration-line: underline;
-    text-align: center;
+    width: auto;
     margin: 5px;
     font-family: 'Ubuntu', sans-serif; }
-  .campo1 {
+  .campo1, .campo2 {
     background-color: #fbeeca4a;
-    font-size: 30px;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 29px;
-    margin: 41px;
     border-radius: 2rem; }
-    .campo1 p {
+    .campo1 p, .campo2 p {
       color: #fbfbfb; }
-  span {
-    color: #faf5e7;
-    display: flex;
-    flex-direction: row-reverse; }
   #email, #password {
-    width: 400px;
+    width: 265px;
     border-radius: .5rem;
-    height: 28px;
-    border-color: #7e5861; }
+    border-color: #7e5861;
+    height: 50px; }
   #password {
-    width: 400px;
+    width: 265px;
     border-radius: .5rem;
-    height: 28px;
-    border-color: #7e5861; }
+    border-color: #7e5861;
+    height: 50px; }
   #botonL {
     padding: 10px 30px;
     margin-top: 45px;
@@ -1531,12 +1611,7 @@ footer .mapaGoogle {
       transform: translateX(-8px); } }
   .campo2 {
     background-color: #fff8e74a;
-    padding: 50px;
-    font-size: 30px;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 29px;
-    margin: 41px;
     border-radius: 2rem; }
     .campo2 p {
       color: #fbfbfb; } }
@@ -1693,9 +1768,9 @@ footer .mapaGoogle {
     grid-template-rows: repeat(2, 1fr); }
   .imagenesCatalogo img {
     object-fit: cover;
-    width: 88%;
+    width: 100%;
     vertical-align: top;
-    height: 400px;
+    height: 338px;
     padding: 10px;
     margin: 10px;
     background-color: #c0a3a3; }
@@ -1705,4 +1780,39 @@ footer .mapaGoogle {
       cursor: pointer; }
     .imagenesCatalogo img p {
       color: white;
-      font-size: 25px; } }
+      font-size: 25px; }
+  footer .pieDePagina {
+    background-color: #fadb9336;
+    margin-top: 73px;
+    border-radius: 5px;
+    padding: 5px; }
+  footer p {
+    font-size: 30px;
+    color: #FFFF;
+    padding: 5px; }
+  footer .mapaGoogle {
+    padding: 20px;
+    width: 275px;
+    height: 300px; }
+  footer .contenedor-ig-wsp {
+    display: flex;
+    flex-direction: column; } }
+
+/*footer para mobile*/
+@media (max-width: 320px) {
+  footer .pieDePagina {
+    background-color: #fadb9336;
+    margin-top: 73px;
+    border-radius: 5px;
+    padding: 5px; }
+  footer p {
+    font-size: 30px;
+    color: #FFFF;
+    padding: 5px; }
+  footer .mapaGoogle {
+    padding: 20px;
+    width: 275px;
+    height: 300px; }
+  footer .contenedor-ig-wsp {
+    display: flex;
+    flex-direction: column; } }

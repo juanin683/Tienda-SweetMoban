@@ -44,11 +44,10 @@ header{
         margin: -30px;
     }
 
-
     .imgaFinal1{
         display: flex;
         flex-direction: row-reverse;
-        height: 80px;
+        height: 70px;
             img{
                 background-color: rgb(238, 133, 133);
                 border-radius: 5%;
@@ -140,23 +139,20 @@ header{
         @include carrito (row-reverse);
         margin-right: -4px;
         padding: 6px;
-        margin-top: -14px;
+        margin-top: -8px;
             img{
                 background-color:rgb(241, 126, 126);
                 border-radius: 10%;
                 height: 50px;
             }
-
             p{
                 @include carrito(row-reverse);
                 padding-top: 19px;
                 padding-right: 30px;
                 font-size: 20px;
-                
             }
 
 }
-
 
 /*navbar*/
 .navBarStyle {
@@ -178,7 +174,6 @@ header{
             }
         }
 }
-
 }
 
 .container-img-p{

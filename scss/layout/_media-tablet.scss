@@ -1,18 +1,18 @@
 /*tablet(index.html)*/
 @media(max-width: 768px){
     body{
-        background-image: url("../assets/img/imgBody2.png") ;
+        background-image: url("../assets/img/mujersentada.jpg") ;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        width: 700px;
+        width: auto;
     }
     
     header{
         background-color: rgb(140, 60, 60);
         opacity: 0.6;
         align-items: center;
-        width: 106%;
+        width: auto;
         position: relative;
         /*logo */
         .sombrerito {
@@ -38,6 +38,7 @@
         .contenedor-c-c{
             padding: 20px;
             margin-top: -20px;
+            margin-left: 20px;
             @include carrito(row);
             position: absolute;
             top: 37px;
@@ -165,14 +166,13 @@
             object-fit: cover;
             transform: scale(0.9);
             transition: transform 1s ease;
-    
-            p{
-            text-align: center;
-            font-size: 60px;
-            color: antiquewhite;
-            margin: 24px;
-            padding: 15px;
         }
+        p{
+            text-align: center;
+            font-size: 30px;
+            color: antiquewhite;
+            margin: 3px;
+            padding: 8px;
         }
     
     }
@@ -194,7 +194,8 @@
         margin-top: 80px;
         border-radius: 5px;
         padding: 17px;
-        width: 106%;
+        width: auto;
+        }
         .mapaGoogle{
             padding: 20px;
         }
@@ -203,7 +204,7 @@
             color: #FFFF;
             padding: 5px;
         }
-    }
+    
 }
 /*tablet sobremi.html*/
 /*sobremi*/
@@ -212,7 +213,7 @@
         background-color: rgb(140, 60, 60);
         opacity: 0.6;
         align-items: center;
-        width: 106%;
+        width: auto;
         position: relative;
         /*logo */
         .sombrerito a img{
@@ -228,11 +229,16 @@
             @include grid(repeat(2,100px),repeat(2,29px));
             padding-left: 65px;
         }
+
+        .sweetmoban{
+            display: none;
+        }
     
         /*contenedorcontactoycarrito*/
         .contenedor-c-c{
             padding: 20px;
             margin-top: -20px;
+            margin-bottom: 20px;
             @include carrito (row);
             position: absolute;
             top: 37px;
@@ -362,6 +368,30 @@
             margin-bottom: 15px;
         }
     }
+
+    
+        footer {
+            .pieDePagina{
+            background-color: #fadb9336;
+            margin-top: 73px;
+            border-radius: 5px;
+            padding: 5px;}
+            p {
+                font-size: 30px;
+                color: #FFFF;
+                padding: 5px;
+            }
+            .mapaGoogle{
+                padding: 20px;
+                width:275px;
+                height: 300px;
+            }
+            .contenedor-ig-wsp{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        
 }
 
 /*tablet catalogo.html*/
@@ -575,11 +605,12 @@
     /*imgs*/
     .imagenesCatalogo{
         @include grid(repeat(2,1fr), repeat(2,1fr));
-    }
+    
         
-    .imagenesCatalogo img{
+        img{
+
             object-fit: cover;
-            width: 88%;
+            width: 90%;
             vertical-align: top;
             height: 400px;
             padding: 10px;
@@ -590,12 +621,15 @@
                 transition: all 1s ease-in-out;
                 cursor: pointer;
             }
+        }
 
             p{
                 color: white;
                 font-size: 25px;
+                margin: 20px;
             }
-        }   
+        
+    }  
     }
 
 /*informacion.html*/
@@ -604,7 +638,7 @@
         background-color: rgb(140, 60, 60);
         opacity: 0.6;
         align-items: center;
-        width: 106%;
+        width: auto;
         position: relative;
         /*logo */
         .sombrerito a img{
@@ -623,13 +657,13 @@
         /*contenedorcontactoycarrito*/
         .contenedor-c-c{
             padding: 20px;
-            margin-top: -20px;
+            margin-top: -29px;
+            margin-right: -63px;
             display: flex;
             flex-direction: row; 
             position: absolute;
             top: 37px;
             right: 117px;
-            margin: -30px;
         }
         /*contacto*/
         html{
@@ -782,9 +816,12 @@
 }
 /*login.html*/
 @media (max-width:768px) {
+    
     .formulario {
-       @include grid (repeat(1,1fr), repeat(1,1fr));
+        
+
     }
+   
       .titulo1 {
         font-size: 40px;
         padding: 15px;
@@ -795,30 +832,18 @@
         font-family: 'Ubuntu', sans-serif; }
       .campo1 {
         background-color: #fbeeca4a;
-        font-size: 30px;
-        text-align: center;
-        font-family: 'Ubuntu', sans-serif;
-        padding: 29px;
-        margin: 41px;
+        text-align: center;        
         border-radius: 2rem;
         p {
             color: #fbfbfb; } 
         }
-        
-      span {
-        color: #faf5e7;
-        display: flex;
-        flex-direction: row-reverse; }
+      
       #email, #password {
-        width: 400px;
+        
         border-radius: .5rem;
         height: 28px;
         border-color: #7e5861; }
-      #password {
-        width: 400px;
-        border-radius: .5rem;
-        height: 28px;
-        border-color: #7e5861; }
+
       #botonL {
         padding: 10px 30px;
         margin-top: 45px;
@@ -876,12 +901,7 @@
           transform: translateX(-8px); } }
       .campo2 {
         background-color: #fff8e74a;
-        padding: 50px;
-        font-size: 30px;
         text-align: center;
-        font-family: 'Ubuntu', sans-serif;
-        padding: 29px;
-        margin: 41px;
         border-radius: 2rem; 
         p {
             color: #fbfbfb; }
