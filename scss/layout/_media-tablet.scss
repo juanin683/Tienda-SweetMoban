@@ -418,8 +418,7 @@
     }
     
     .sweetmoban{
-        display: flex;
-        flex-direction: row;
+        @include carrito (row);
         margin: 13px;
         font-size: 30px;
     
@@ -605,10 +604,7 @@
     /*imgs*/
     .imagenesCatalogo{
         @include grid(repeat(2,1fr), repeat(2,1fr));
-    
-        
         img{
-
             object-fit: cover;
             width: 90%;
             vertical-align: top;
@@ -622,15 +618,13 @@
                 cursor: pointer;
             }
         }
-
             p{
                 color: white;
                 font-size: 25px;
                 margin: 20px;
             }
-        
     }  
-    }
+}
 
 /*informacion.html*/
 @media (max-width:768px) {
@@ -659,8 +653,7 @@
             padding: 20px;
             margin-top: -29px;
             margin-right: -63px;
-            display: flex;
-            flex-direction: row; 
+            @include carrito(row);
             position: absolute;
             top: 37px;
             right: 117px;
@@ -792,7 +785,8 @@
         font-family: 'Ubuntu', sans-serif;
         font-size: 30px;
         padding: 20px 30px;
-    }}
+    }
+}
     
 
 
@@ -818,8 +812,6 @@
 @media (max-width:768px) {
     
     .formulario {
-        
-
     }
    
       .titulo1 {
@@ -835,8 +827,9 @@
         text-align: center;        
         border-radius: 2rem;
         p {
-            color: #fbfbfb; } 
-        }
+            color: #fbfbfb; 
+        } 
+    }
       
       #email, #password {
         

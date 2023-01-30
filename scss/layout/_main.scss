@@ -8,8 +8,6 @@ body{
 }
 
 /*main index.html*/
-
-
 /*fotosimagenesingresos*/
 .imagenesIngresos{
     p{
@@ -51,6 +49,7 @@ body{
         text-align: center;
         color: antiquewhite;
         font-size: 30px;
+        margin: 5px;
     }
     img{
         align-items: center;
@@ -259,6 +258,8 @@ body{
     /*login.html*/
     
     .formulario{
+            @include grid ( repeat(1,90%),repeat(1, 12%));
+           
     }
     
     .titulo1{
@@ -283,19 +284,50 @@ body{
         }
     }
 
-
+    .form-control {
+        position: relative;
+        margin: 20px 0 40px;
+        width: 190px;
+      }
+      
+      .form-control input {
+        background-color: rgb(255, 254, 245);
+        border: 0;
+        border-bottom: 2px rgba(61, 60, 53, 0) solid;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        color: rgb(32, 30, 25);
+      }
+      
+      .form-control input:focus,
+      .form-control input:valid {
+        outline: 0;
+        border-bottom-color: rgb(57, 56, 52);
+      }
+      
+      .form-control label {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        pointer-events: none;
+      }
+      
+      .form-control label span {
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        color: rgb(58, 44, 21);
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      
+      .form-control input:focus+label span,
+      .form-control input:valid+label span {
+        color: rgb(69, 66, 42);
+        transform: translateY(-15px);
+      }
     
-    #email {
-        width: 327px;
-        border-radius: .5rem;
-        height: 28px;
-        border-color: #7e5861;
-    
-    }
-    
-    #password {
-        @extend #email
-    }
     
     #botonL{
         margin-top: 45px;
@@ -380,8 +412,66 @@ body{
     }
 
 
-/*imgejemplo.html*/
+/*detallesdeimgs clases*/
 .blazer{
     color: #fef9bd;
+    margin: 2px;
+    
 }
-
+.blazer img{
+    height: 350px;
+    width: 300px;
+    object-fit: cover;
+}
+/*boton vestidofloreado.html*/
+.comprarycarrito{
+    button {
+        --color: #560bad;
+        font-family: inherit;
+        display: inline-block;
+        width: 8em;
+        height: 2.6em;
+        line-height: 2.5em;
+        margin: 20px;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid var(--color);
+        transition: color .5s;
+        z-index: 1;
+        font-size: 17px;
+        border-radius: 6px;
+        font-weight: 500;
+        color: var(--color);
+       }
+       
+       button:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: var(--color);
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+       }
+       
+       button:hover {
+        color: #fff;
+       }
+       
+       button:before {
+        top: 100%;
+        left: 100%;
+        transition: all .7s;
+       }
+       
+       button:hover:before {
+        top: -30px;
+        left: -30px;
+       }
+       
+       button:active:before {
+        background: #3a0ca3;
+        transition: background 0s;
+       }
+       
+} 
