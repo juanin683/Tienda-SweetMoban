@@ -9,7 +9,11 @@ header {
   opacity: 0.6;
   align-items: center;
   display: grid;
-  grid-template-columns: auto;}
+  grid-template-columns: auto;
+  /*logo */
+  /*container contacto carrito*/
+  /*carrito*/
+  /*navbar*/ }
   header .container-fluid {
     background-color: #ee9696;
     height: 50%;
@@ -25,6 +29,7 @@ header {
   header .sombrerito p {
     color: #FFFF;
     display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 100px);
     grid-template-rows: repeat(2, 29px);
     padding-left: 65px; }
@@ -38,13 +43,14 @@ header {
   header .imgaFinal1 {
     display: flex;
     flex-direction: row-reverse;
-    height: 70px;
+    margin: 2px;
     -webkit-animation: heartbeat 2s ease-in-out  both;
     animation: heartbeat 2s ease-in-out both; }
     header .imgaFinal1 img {
       background-color: #ee8585;
       border-radius: 5%;
-      border-top: 10%; }
+      border-top: 10%;
+      width: 50px; }
 
 @-webkit-keyframes heartbeat {
   from {
@@ -107,25 +113,25 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 20px;
-    padding-top: 24px;
+    font-size: 16px;
+    padding-top: 14px;
     padding-right: 10px; }
   header .imgaFinal2 {
     display: flex;
     flex-direction: row-reverse;
     margin-right: -4px;
-    padding: 6px;
-    margin-top: -8px; }
+    padding: 4px; }
     header .imgaFinal2 img {
       background-color: #f17e7e;
       border-radius: 10%;
-      height: 50px; }
+      height: 47px;
+      margin-right: 4px; }
     header .imgaFinal2 p {
       display: flex;
       flex-direction: row-reverse;
-      padding-top: 19px;
-      padding-right: 30px;
-      font-size: 20px; }
+      padding-top: 12px;
+      padding-right: 15px;
+      font-size: 16px; }
   header .navBarStyle {
     color: #f1f1e2;
     font-weight: 50px;
@@ -582,8 +588,8 @@ footer p {
 
 footer .mapaGoogle {
   padding: 20px;
-  width: 400px;
-  height: 400px; }
+  width: 350px;
+  height: 350px; }
 
 footer .contenedor-ig-wsp {
   display: flex;
@@ -637,8 +643,8 @@ footer .contenedor-ig-wsp {
       header .imgaFinal1 img {
         background-color: #d99292;
         border-radius: 7%;
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         -webkit-animation: heartbeat 2s ease-in-out  both;
         animation: heartbeat 2s ease-in-out both; }
   @-webkit-keyframes heartbeat {
@@ -708,7 +714,7 @@ footer .contenedor-ig-wsp {
       header .imgaFinal2 img {
         background-color: #dd9d9d;
         border-radius: 10%;
-        height: 60px; }
+        height: 52px; }
       header .imgaFinal2 p {
         display: none; }
     header .navbar-nav {
@@ -760,7 +766,13 @@ footer .contenedor-ig-wsp {
     opacity: 0.6;
     align-items: center;
     width: auto;
-    position: relative;}
+    position: relative;
+    /*logo */
+    /*sweet moban*/
+    /*contenedorcontactoycarrito*/
+    /*contacto*/
+    /*carrito*/
+    /*navbar*/ }
     header .sombrerito a img {
       position: absolute;
       width: 100px;
@@ -792,8 +804,8 @@ footer .contenedor-ig-wsp {
       header .imgaFinal1 img {
         background-color: #d99292;
         border-radius: 7%;
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         -webkit-animation: heartbeat 2s ease-in-out  both;
         animation: heartbeat 2s ease-in-out both; }
   @-webkit-keyframes heartbeat {
@@ -863,7 +875,7 @@ footer .contenedor-ig-wsp {
       header .imgaFinal2 img {
         background-color: #dd9d9d;
         border-radius: 10%;
-        height: 60px; }
+        height: 52px; }
       header .imgaFinal2 p {
         display: none; }
     header .navbar-nav {
@@ -996,7 +1008,7 @@ footer .contenedor-ig-wsp {
   .imgaFinal2 img {
     background-color: #dd9d9d;
     border-radius: 10%;
-    height: 64px;
+    height: 52px;
     -webkit-animation: heartbeat 2s ease-in-out  both;
     animation: heartbeat 2s ease-in-out both; }
   .imgaFinal2 p {
@@ -1086,7 +1098,13 @@ footer .contenedor-ig-wsp {
     opacity: 0.6;
     align-items: center;
     width: auto;
-    position: relative;}
+    position: relative;
+    /*logo */
+    /*sweet moban*/
+    /*contenedorcontactoycarrito*/
+    /*contacto*/
+    /*carrito*/
+    /*navbar*/ }
     header .sombrerito a img {
       position: absolute;
       width: 100px;
@@ -1115,8 +1133,8 @@ footer .contenedor-ig-wsp {
       header .imgaFinal1 img {
         background-color: #d99292;
         border-radius: 7%;
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         -webkit-animation: heartbeat 2s ease-in-out  both;
         animation: heartbeat 2s ease-in-out both; }
   @-webkit-keyframes heartbeat {
@@ -1186,7 +1204,7 @@ footer .contenedor-ig-wsp {
       header .imgaFinal2 img {
         background-color: #dd9d9d;
         border-radius: 10%;
-        height: 60px; }
+        height: 52px; }
       header .imgaFinal2 p {
         display: none; }
     header .navbar-nav {
@@ -1337,8 +1355,8 @@ footer .contenedor-ig-wsp {
     header .imgaFinal1 img {
       background-color: #d99292;
       border-radius: 7%;
-      width: 51px;
-      height: 59px; }
+      width: 50px;
+      height: 50px; }
     header html {
       scroll-behavior: smooth; }
     header .imgaFinal1 {
@@ -1407,7 +1425,7 @@ footer .contenedor-ig-wsp {
     header .imgaFinal2 img {
       background-color: #dd9d9d;
       border-radius: 10%;
-      height: 58px; }
+      height: 52px; }
     header .imgaFinal2 p {
       display: none; }
     header .navbar-nav {
@@ -1472,8 +1490,8 @@ footer .contenedor-ig-wsp {
     header .imgaFinal1 img {
       background-color: #d99292;
       border-radius: 7%;
-      width: 51px;
-      height: 59px; }
+      width: 50px;
+      height: 50px; }
     header html {
       scroll-behavior: smooth; }
     header .imgaFinal1 {
@@ -1542,7 +1560,7 @@ footer .contenedor-ig-wsp {
     header .imgaFinal2 img {
       background-color: #dd9d9d;
       border-radius: 10%;
-      height: 58px; }
+      height: 52px; }
     header .imgaFinal2 p {
       display: none; }
     header .navbar-nav {
@@ -1771,7 +1789,7 @@ footer .contenedor-ig-wsp {
   .imgaFinal2 img {
     background-color: #dd9d9d;
     border-radius: 10%;
-    height: 64px;
+    height: 52px;
     -webkit-animation: heartbeat 2s ease-in-out  both;
     animation: heartbeat 2s ease-in-out both; }
     .imgaFinal2 img p {
