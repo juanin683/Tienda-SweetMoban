@@ -410,7 +410,6 @@
 
     .titulo1{
         font-size: 40px;
-        
         color: #faf5e7;
         text-decoration-line: underline;
         width: auto;
@@ -420,9 +419,7 @@
 
     .campo1{
         background-color: #fbeeca4a;
-        
         text-align: center;
-      
         border-radius: 2rem;
         p{
             color: #fbfbfb;
@@ -533,8 +530,7 @@
     display: flex;
     }
     .sweetmoban{
-        display: flex;
-        flex-direction: row;
+        @include carrito(row);
         margin: 13px;
     }
     
@@ -779,8 +775,7 @@ footer {
         height: 300px;
     }
     .contenedor-ig-wsp{
-        display: flex;
-        flex-direction: row;
+        @include carrito (row);
     }
 }
 }
