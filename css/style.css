@@ -9,11 +9,7 @@ header {
   opacity: 0.6;
   align-items: center;
   display: grid;
-  grid-template-columns: auto;
-  /*logo */
-  /*container contacto carrito*/
-  /*carrito*/
-  /*navbar*/ }
+  grid-template-columns: auto; }
   header .container-fluid {
     background-color: #ee9696;
     height: 50%;
