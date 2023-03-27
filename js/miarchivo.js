@@ -108,21 +108,17 @@ botonvistaprevia.addEventListener("click", () =>{
         <input type="radio" name="S" id="" value="Small">S</input>
         <input type="radio" name="M" id="">M</input>
         <input type="radio" name="L" id="">L</input>
-        <p>Cantidad</p>
+        <p>Cantidad </p>
+        <input type="number" name="" id="boton${prod.id}"></input>
+        
 
-        <input type="number" name="" id="${prod.cantidad}">
-        <button id="${prod.id}" class="btn-button">Agregar al Carrito</button>
+        <button id="boton${prod.id}" class="btn-button">Agregar al Carrito</button>
     </div>
     `;
 
     container.append(vistaDelItem);
 
-    //btn del modal agregar al carrito
     
-    // botonparaagregaralcarrito.innerText = "Agregar al carrito";
-    // botonparaagregaralcarrito.className = "agregar-al-carrito";
-
-    //vistaDelItem.append(botonparaagregaralcarrito)
 
     let cruzButton = document.createElement("button");
     container.style.display = "flex";
@@ -135,23 +131,12 @@ botonvistaprevia.addEventListener("click", () =>{
 
     vistaDelItem.append(cruzButton);
 
-
-    // botonparaagregaralcarrito.addEventListener("click", ()=>{
-        
-    //     carrito.push({
-    //         nombre:prod.nombre, img:prod.img, precio:prod.precio,
-    //             });
-
-    //             botonAgregarAlCarrito()
-    //             console.log(carrito)
-    //     })
-
-    let btnac = document.querySelectorAll('.btn-button');
-    btnac.forEach(elemento => {
-        elemento.addEventListener('click', (e) =>{
-            agregarAlCarrito(e.target.id)
+    //btn del modal para agregar al carrito
+    let btnac = document.getElementById(`boton${prod.id}`);
+    btnac.addEventListener('click', () =>{
+            agregarAlCarrito(prod.id)     
         })
-    })
+    
 })
 
    
@@ -161,63 +146,32 @@ botonvistaprevia.addEventListener("click", () =>{
 
 carritoDeCompras()
 
-function  agregarAlCarrito (id){
-    let producto = misProductos.find((producto) => producto.id === id)
-    let prodEnCarrito = carrito.find((prodrepeat) => prodrepeat.id === id)
-    
-    if (prodEnCarrito) {
-        // carrito.map((product)=>{
-            //     if(product.id === product.id){
-                //         product.cantidad++;
-                //     }
-                // });
-                
-        // const index = carrito.findIndex(product => product.id === parseInt.id);
-        // const productoss = carrito.map(prod => {
-        //     if (prod.id === misProductos.id) {
-        //         let cantidad = parseInt(prod.cantidad)
-        //         cantidad ++
-        //         prod.cantidad = cantidad;
-        //         return prod
-        //     } else {
-        //         return prod
-                
-        //     }
-           
-        
-        //})
 
-        prodEnCarrito.cantidad++;
+ function  agregarAlCarrito (id){
+     let producto = misProductos.find((producto) => producto.id === id)
+   let prodEnCarrito = carrito.find((prodrepeat) => prodrepeat.id === parseInt((id)))
+    
+     if (prodEnCarrito) {
+    
+         prodEnCarrito.cantidad++;
         
+     } else {
         
-    } else {
-        //  carrito.push({
-        //      id: prod.id,
-        //      img: product.img,
-        //      nombre: product.nombre,
-        //      precio: product.precio,
-        //      cantidad: product.cantidad,
-        //  })
-         
-        // let prodEncontrado = misProductos.find(item => item.id === parseInt(id));
-        //  carrito.push(prodEncontrado)
-        carrito.push(producto)
-        
-        
+         carrito.push(producto)
+         console.log(carrito)
    
     }
 
     botonAgregarAlCarrito()
-
-
    
-}
+ }
 
 
-//carrito img
+  //carrito img(header)
     function botonAgregarAlCarrito(){
         
     let miCarrito2 = document.querySelector("#carrito-img");
+    
     miCarrito2.addEventListener("mouseover", () => {
             miCarrito.innerHTML = "";
 
@@ -229,20 +183,14 @@ function  agregarAlCarrito (id){
         `;
         miCarrito.append(cajaComprasHeader);
 
-
-
-        // const cruzButton2 = document.createElement("button");
-
-        // cruzButton2.innerHTML = "X";
-
-
-        // cajaComprasHeader.classList.add = ("cruzButton2");
-        // cruzButton2.addEventListener("click", ()=>{
-        //     miCarrito.classList.remove = ("cruzButton2");
-
-        // })
-
+       
         carrito.find((prod)=>{
+            let totaldiv = document.createElement("div");
+            let totaldelcarrito = carrito.reduce((acumulador, product)=>acumulador + product.precio * product.cantidad, 0 )
+            totaldelcarrito.className = "todos-productos-elegidos"
+            totaldelcarrito.innerHTML = `El total a pagar es de: ${totaldelcarrito}`;
+            miCarrito.append(totaldiv);
+            
             let carritoconcontenido = document.createElement("div");
             carritoconcontenido.className = "cajaComprasContenido";
             carritoconcontenido.innerHTML = `
@@ -250,9 +198,11 @@ function  agregarAlCarrito (id){
             <h2>Nombre: ${prod.nombre}</h2>
             <p>Precio: ${prod.precio}</p>
             <p>Cantidad: ${prod.cantidad}</p>
-            
-            
+            <p>Total por producto: ${prod.cantidad * prod.precio}</p>
+            <p class="todos-productos-elegidos">El total a pagar es de: ${totaldelcarrito}</p>
             ` ;
+            
+
 
             miCarrito.append(carritoconcontenido);
             let eliminar = document.createElement("button");
@@ -263,12 +213,17 @@ function  agregarAlCarrito (id){
             
             
             eliminar.addEventListener("click",eliminarItem)
+
+
+            
+            
             })
+            localStorage.setItem('productos-en-mi-carrito', JSON.stringify(carrito))
+            let productosEnCarrito = localStorage.getItem('productos-en-mi-carrito').split("--");
+                    console.log(productosEnCarrito)
+})
 
 
-        
-           
-    })
 }
 
 function eliminarItem(prodId){
@@ -278,20 +233,6 @@ function eliminarItem(prodId){
         return carritoId !== buscarId;
      })
      botonAgregarAlCarrito()
-           
-                
-            
+    
 }
-
-function totalPrecioCarrito(){
-    botonAgregarAlCarrito()
-    let totaldelcarrito = carrito.reduce((acumulador, product)=>acumulador + product.precio, 0 )
-    totaldelcarrito.className = "todos-productos-elegidos"
-    totaldelcarrito.innerHTML = `El total a pagar es de: ${totaldelcarrito}`;
-    miCarrito.append(totaldelcarrito);
-    }
-
-
-
-
-
+botonAgregarAlCarrito()

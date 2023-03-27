@@ -1906,7 +1906,7 @@ footer #pie {
     
         
         header #carrito-compras p {
-          display: none; }
+          display: flex; }
     
     
     
