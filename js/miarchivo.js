@@ -1,239 +1,295 @@
-const misProductos = [
+let misProductos = [
     {
-        nombre: "vestido floreado" , 
-        precio: 3000,
-        img: "../assets/img/graphic-woman-dress-trendy-design-on-white-background (1).jpg",
+        nombre: "vestido floreado" ,
+        precio: 2000,
+        img: "./assets/img/graphic-woman-dress-trendy-design-on-white-background (1).jpg",
+        cantidad: 1,
+        id: 1,
 
     },
-    {nombre: "conjunto blazer y pantalon naranja" , precio: 3000},
-    {nombre: "vestido rojo oscuro" , precio: 3500},
-    {nombre: "top purpura" , precio: 2500},
-    {nombre: "remera musculosa" , precio: 2800},
-    {nombre: "remera con diseño mano esqueletica" , precio: 2800},
-    
+    {
+        nombre: "conjunto blazer y pantalon naranja" ,
+        precio: 2000,
+        img: "./assets/img/blazer.jpeg",
+        cantidad: 1,
+        id:2,
+    },
+    {
+        nombre: "vestido rojo oscuro" ,
+        precio: 3500,
+        img: "./assets/img/vestidoelegantecolorbordo.jpg",
+        cantidad: 1,
+       id:3,
+    },
+    {
+        nombre: "top purpura" ,
+        precio: 1000,
+        img: "./assets/img/topPurpura.jpg",
+        cantidad: 1,
+       id:4,
+    },
+    {
+        nombre: "remera musculosa" ,
+        precio: 1500,
+        img: "./assets/img/remeras.jpg",
+        cantidad: 1,
+       id:5,
+    },
+    {
+        nombre: "remera con diseño mano esqueletica" ,
+        precio: 900,
+        img: "./assets/img/ian-dooley-TT-ROxWj9nA-unsplash.jpg",
+        cantidad: 1,
+        id:6,
+    },
+
 ];
 
-const carrito = [];
+let carrito = [];
 
-misProductos.map((cadaProducto) =>{
- console.log(misProductos.nombre +  misProductos.precio);
+
+let ropas = document.querySelector("#contener-ropas")
+let miCarrito = document.querySelector("#carrito-compras");
+let miCarrito2 = document.querySelector("#carrito-img");
+
+let container = document.getElementById("modal-container")
+
+
+
+let vistaDelItem = document.createElement("div")
+let botonparaagregaralcarrito = document.createElement("button");
+
+
+//recorre productos y crea etiquetas html
+
+function carritoDeCompras (){
+
+misProductos.forEach((prod) =>{
+    //imgs de main
+    let contenidodiv = document.createElement("div")
+    contenidodiv.className= "mis-productos"
+    contenidodiv.innerHTML = `
+    <div class="container " >
+        <section class="imagenesIngresos row">
+
+            <div class="titulosRopa row" id="contener-ropas"
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class=" img-fluid img-thumbnail mx-auto d-block mt-5"
+                     src="${prod.img}">
+                    <p> ${prod.nombre} $${prod.precio}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+` ;
+
+    ropas.append(contenidodiv);
+
+    //btn vista previa del producto
     
+
+    
+    let botonvistaprevia = document.createElement("button")
    
-   
-    // const contenido = document.createElement("div")
-    // contenido.innerHTML = `
-    // <img src="${cadaProducto.img}">
-    // <p>${cadaProducto.nombre}</p>
-    // <p>${cadaProducto.precio}</p>
-    // ` ;
+    botonvistaprevia.innerText = "Vista previa del Producto";
+    botonvistaprevia.className = "vista-previa-del-producto";
+    contenidodiv.append(botonvistaprevia);
+
+botonvistaprevia.addEventListener("click", () =>{
+        container.innerHTML = "";
+    vistaDelItem.className = "vistaDelItem"
+    vistaDelItem.innerHTML = `
+    <h1 class="caja-vistapreviaprod-header">${prod.nombre}</h1>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <img  src="${prod.img}"></a>
+        <p> $${prod.precio} </p>
+
+        <input type="radio" name="S" id="" value="Small">S</input>
+        <input type="radio" name="M" id="">M</input>
+        <input type="radio" name="L" id="">L</input>
+        <p>Cantidad</p>
+
+        <input type="number" name="" id="${prod.cantidad}">
+        <button id="${prod.id}" class="btn-button">Agregar al Carrito</button>
+    </div>
+    `;
+
+    container.append(vistaDelItem);
+
+    //btn del modal agregar al carrito
+    
+    // botonparaagregaralcarrito.innerText = "Agregar al carrito";
+    // botonparaagregaralcarrito.className = "agregar-al-carrito";
+
+    //vistaDelItem.append(botonparaagregaralcarrito)
+
+    let cruzButton = document.createElement("button");
+    container.style.display = "flex";
+
+    cruzButton.innerHTML = "X";
+    cruzButton.className = "boton-exit";
+    cruzButton.addEventListener("click", ()=>{
+        container.style.display = "none";
+        })
+
+    vistaDelItem.append(cruzButton);
 
 
+    // botonparaagregaralcarrito.addEventListener("click", ()=>{
+        
+    //     carrito.push({
+    //         nombre:prod.nombre, img:prod.img, precio:prod.precio,
+    //             });
+
+    //             botonAgregarAlCarrito()
+    //             console.log(carrito)
+    //     })
+
+    let btnac = document.querySelectorAll('.btn-button');
+    btnac.forEach(elemento => {
+        elemento.addEventListener('click', (e) =>{
+            agregarAlCarrito(e.target.id)
+        })
+    })
 })
 
-const botonAgregoCarrito = document.getElementById("botonAgregarAlCarrito")
-const miCarrito = document.querySelector('carrito-compras');
-const Container = document.getElementById("modalContainer")
+   
+})
 
-botonAgregoCarrito.addEventListener("click", () =>{
-    carrito.push({
-        nombre: misProductos.nombre,
-        precio: misProductos.precio,
-    });
-    alert(carrito);
-});
+}
 
+carritoDeCompras()
 
-
-function cajaconproductos(cajaconproductos){
+function  agregarAlCarrito (id){
+    let producto = misProductos.find((producto) => producto.id === id)
+    let prodEnCarrito = carrito.find((prodrepeat) => prodrepeat.id === id)
     
-    const cajaComprasHeader = document.createElement("div")
-    cajaComprasHeader.className = "caja-compras-header"
-    cajaComprasHeader.innerHTML = `
-    <h1 class="caja-vistaprevia-header">Mi Carrito</h1>
-    `;
-    Container.append(cajaComprasHeader);
+    if (prodEnCarrito) {
+        // carrito.map((product)=>{
+            //     if(product.id === product.id){
+                //         product.cantidad++;
+                //     }
+                // });
+                
+        // const index = carrito.findIndex(product => product.id === parseInt.id);
+        // const productoss = carrito.map(prod => {
+        //     if (prod.id === misProductos.id) {
+        //         let cantidad = parseInt(prod.cantidad)
+        //         cantidad ++
+        //         prod.cantidad = cantidad;
+        //         return prod
+        //     } else {
+        //         return prod
+                
+        //     }
+           
+        
+        //})
 
-    const modalButton = document.createElement("p");
-    modalButton.innerHTML = "x";
-    modalButton.className = "boton-vistaprevia-header";
+        prodEnCarrito.cantidad++;
+        
+        
+    } else {
+        //  carrito.push({
+        //      id: prod.id,
+        //      img: product.img,
+        //      nombre: product.nombre,
+        //      precio: product.precio,
+        //      cantidad: product.cantidad,
+        //  })
+         
+        // let prodEncontrado = misProductos.find(item => item.id === parseInt(id));
+        //  carrito.push(prodEncontrado)
+        carrito.push(producto)
+        
+        
+   
+    }
 
-    cajaComprasHeader.append(modalButton);
+    botonAgregarAlCarrito()
 
-    carrito.forEach((cadaProducto) =>{
-        let carritoconcontenido = document.createElement("div");
-        carrito.className = "cajaComprasContenido";
-        carrito.innerHTML = `
-        <img src="${cadaProducto.img}">
-        <p>${cadaProducto.nombre}</p>
-        <p>${cadaProducto.precio}</p>
-        ` 
-    
+
+   
+}
+
+
+//carrito img
+    function botonAgregarAlCarrito(){
+        
+    let miCarrito2 = document.querySelector("#carrito-img");
+    miCarrito2.addEventListener("mouseover", () => {
+            miCarrito.innerHTML = "";
+
+           
+        const cajaComprasHeader = document.createElement("div")
+        cajaComprasHeader.className = "caja-compras-header"
+        cajaComprasHeader.innerHTML = `
+        <h1 class="caja-header">Mi Carrito</h1>
+        `;
+        miCarrito.append(cajaComprasHeader);
+
+
+
+        // const cruzButton2 = document.createElement("button");
+
+        // cruzButton2.innerHTML = "X";
+
+
+        // cajaComprasHeader.classList.add = ("cruzButton2");
+        // cruzButton2.addEventListener("click", ()=>{
+        //     miCarrito.classList.remove = ("cruzButton2");
+
+        // })
+
+        carrito.find((prod)=>{
+            let carritoconcontenido = document.createElement("div");
+            carritoconcontenido.className = "cajaComprasContenido";
+            carritoconcontenido.innerHTML = `
+            <img src="${prod.img}">
+            <h2>Nombre: ${prod.nombre}</h2>
+            <p>Precio: ${prod.precio}</p>
+            <p>Cantidad: ${prod.cantidad}</p>
+            
+            
+            ` ;
+
+            miCarrito.append(carritoconcontenido);
+            let eliminar = document.createElement("button");
+            eliminar.innerText = "X"
+            eliminar.className = "eliminar-producto"
+            carritoconcontenido.append(eliminar);
+           
+            
+            
+            eliminar.addEventListener("click",eliminarItem)
+            })
+
+
+        
+           
     })
 }
 
-miCarrito.addEventListener("click", cajaconproductos);
-
-// let eleccion = prompt("Hola desea comprar? (Elegir si/no)");
-// console.log(misProductos)
-
-
-// let descuento1 = 50;
-// let descuento2 = 60;
-// let descuento3 = 75;
-
-
-// while(eleccion != "si" && eleccion !="no" ){
-//     alert("Por favor ingresa una opcion");
-//     eleccion = prompt("Hola desea comprar? (Elegir si/no)");
-// }
-
-
-// if (eleccion =="si") {
-//     alert("Esta es la lista de productos nuevos: ")
+function eliminarItem(prodId){
     
-//     let ropasweetmoban = misProductos.map((misProductos) => misProductos.nombre  + "   " + " $ "+  misProductos.precio);
-//     alert(ropasweetmoban)
-    
-    
-// } else if (eleccion == "no"){
-//     alert("Gracias. Vuelva pronto.");
-// }
+    const buscarId = carrito.find((unelemento) => unelemento.id);
+     carrito = carrito.filter((carritoId)=> {
+        return carritoId !== buscarId;
+     })
+     botonAgregarAlCarrito()
+           
+                
+            
+}
 
-// while(eleccion == "si"){
-//     let misProductos= prompt("Que producto desea comprar?");
-//     let precio = 0;
-    
-
-//     if (misProductos == "vestido floreado" || misProductos == "conjunto blazer y pantalon naranja" || misProductos == "vestido rojo oscuro" || misProductos == "top purpura" 
-//         || misProductos == "remera musculosa" ||misProductos == "remera con diseño mano esqueletica") {
-        
-        
-//         switch(misProductos){
-//             case "vestido floreado":
-//             precio = 3000;
-//             descuento1 = 50;
-//             break;
-
-//             case "conjunto blazer y pantalon naranja":
-//             precio = 3000
-//             descuento2 = 60;
-//             break;
-
-//             case "vestido rojo oscuro":
-//             precio = 3500
-//             descuento3 = 75
-//             break;
-
-//             case "top purpura":
-//             precio = 2500
-//             descuento2 = 60
-//             break;
-
-//             case "remera musculosa":
-//             precio = 3500
-//             descuento3 = 75
-//             break;
-
-//             case "remera con diseño mano esqueletica":
-//             precio = 3500
-//             descuento3 = 50
-//             break;
-//             default:
-//             break;
-//         }
-    
-    
-//     let cantidad = parseInt(prompt("Escriba la cantidad"));
-
-//     carrito.push({misProductos,cantidad,precio,descuento1,descuento2,descuento3});
-//     console.log(carrito);
-    
-//     } else{
-//         alert("Aun no tenemos disponible ese stock! ")
-//     }
-
-//     eleccion = prompt("Desea seguir comprando?");
-
-//     while(eleccion === "no"){
-
-//         eleccion = prompt("Con que metodo de pago compra?");
-//         if (eleccion == "efectivo") {
-//             alert("Usted pagara con efectivo")
-//         } else if (eleccion == "tarjeta de credito"){
-//             alert("Usted pagara con tarjeta de credito")
-//         } else {
-//         alert("Por favor ingresa una opcion");
-//         eleccion = prompt("Con que metodo de pago compra?");
-//         }
-
-
-//         alert("Estamos procesando tu compra, un momento...")
-//         alert("Listo!")
-
-
-//         if (misProductos == "vestido floreado") {
-//             carrito.forEach((carritoconproductos) => {
-//             alert(` Producto:  ${carritoconproductos.misProductos} 
-//             Cantidad:  ${carritoconproductos.cantidad}
-//             Precio: ${carritoconproductos.precio}
-//             Total a pagar por producto con descuento: ${carritoconproductos.precio * carritoconproductos.cantidad - descuento1}`)
-//             })
-//         break;
-//         } else if (misProductos == 'conjunto blazer y pantalon naranja'){
-//         carrito.forEach((carritoconproductos2) => {
-//             alert(` Producto:  ${carritoconproductos2.misProductos} 
-//             Cantidad:  ${carritoconproductos2.cantidad}
-//             Precio: ${carritoconproductos2.precio}
-//             Total a pagar por producto con descuento: ${(carritoconproductos2.precio * carritoconproductos2.cantidad)- descuento2}`)
-//         })
-//         break;
-//         } else if (misProductos == 'vestido rojo oscuro'){
-//             carrito.forEach((carritoconproductos3) => {
-//             alert(` Producto:  ${carritoconproductos3.misProductos} 
-//             Cantidad:  ${carritoconproductos3.cantidad}
-//             Precio: ${carritoconproductos3.precio}
-//             Total a pagar por producto con descuento: ${(carritoconproductos3.precio * carritoconproductos3.cantidad)- descuento3}`)
-//         })
-//         break;
-//         }else if (misProductos == 'top purpura'){
-//             carrito.forEach((carritoconproductos4) => {
-//             alert(` Producto:  ${carritoconproductos4.misProductos} 
-//             Cantidad:  ${carritoconproductos4.cantidad}
-//             Precio: ${carritoconproductos4.precio}
-//             Total a pagar por producto con descuento: ${(carritoconproductos4.precio * carritoconproductos4.cantidad)- descuento2}`)
-//         })
-//         break;
-//         }else if (misProductos == 'remera musculosa'){
-//             carrito.forEach((carritoconproductos5) => {
-//             alert(` Producto:  ${carritoconproductos5.misProductos} 
-//             Cantidad:  ${carritoconproductos5.cantidad}
-//             Precio: ${carritoconproductos5.precio}
-//             Total a pagar por producto con descuento: ${(carritoconproductos5.precio * carritoconproductos5.cantidad)- descuento3}`)
-//         })
-//         break;
-//         }else if (misProductos == 'remera con diseño mano esqueletica'){
-//             carrito.forEach((carritoconproductos6) => {
-//             alert(` Producto:  ${carritoconproductos6.misProductos} 
-//             Cantidad:  ${carritoconproductos6.cantidad}
-//             Precio: ${carritoconproductos6.precio}
-//             Total a pagar por producto con descuento: ${(carritoconproductos6.precio * carritoconproductos6.cantidad)- descuento1}`)
-//         })
-//         break;
-//         }
-        
-// };
-
-// }
-
-
-
-
-
-
-
-
-
-
+function totalPrecioCarrito(){
+    botonAgregarAlCarrito()
+    let totaldelcarrito = carrito.reduce((acumulador, product)=>acumulador + product.precio, 0 )
+    totaldelcarrito.className = "todos-productos-elegidos"
+    totaldelcarrito.innerHTML = `El total a pagar es de: ${totaldelcarrito}`;
+    miCarrito.append(totaldelcarrito);
+    }
 
 
 

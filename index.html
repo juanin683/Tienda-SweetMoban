@@ -73,10 +73,10 @@
                   <a href="#pie"><img src="./assets/img/contacto2.png" alt="contacto"></a>
                     <p>Contacto</p>
                 </div>
-                <div class="imgaFinal2">
-                  <a href="">
-                    <img src="./assets/img/carritoCompras.png" title="carrito" alt="carrito"></a>
-                  </a>
+                <img src="./assets/img/carritoCompras.png" title="carrito" alt="carrito" id="carrito-img">
+                <div id="carrito-compras">
+                  
+    
                     <p>Carrito</p>
                 </div>
               </div>
@@ -89,7 +89,7 @@
 
     <div class="container-fluid">
       
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="./assets/img/conjuntofaldasweter (2).jpg" class="d-block w-100" alt="...">
@@ -110,46 +110,21 @@
               <span class="visually-hidden">Next</span>
             </button>
         </div>
-    
+     -->
             
-        <div class="container " >
-            <section class="imagenesIngresos row">
-                  <div class="imagenesIngresos-p">
-                    <p>Nuevos Ingresos</p>
-                  </div>
-                  <div>
-                    <div class="titulosRopa row">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                          <a href="./pages/detalles-de-imgs/vestidofloreado.html"><img class=" img-fluid img-thumbnail mx-auto d-block mt-5"src="./assets/img/graphic-woman-dress-trendy-design-on-white-background (1).jpg" width="600px" height="500px" alt="vestido-colores"></a>
-                            <p> Vestido Floreado  $3000</p>
-                        </div>
-                        
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                          <a href="./pages/detalles-de-imgs/imgejemplo.html"><img class="img-thumbnail mx-auto d-block mt-5" src="./assets/img/blazer.jpeg" alt="mujerTop1"></a>
-                          <p>Conjunto Blazer y Pantalon Naranja  $3000</p>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                          <a href="./pages/detalles-de-imgs/vestidobordo.html">
-                          <img class="img-thumbnail mx-auto d-block mt-5" src="./assets/img/vestidoelegantecolorbordo.jpg" alt="mujerTop7"></a>
-                          <p>Vestido Rojo Oscuro $3500</p>
-                        </div>
-                        
-                            <div class="col-sm-12 col-md-6 col-lg-4"><a href="./pages/detalles-de-imgs/topurpura.html"><img class="img-thumbnail mx-auto d-block mt-5" src="./assets/img/topPurpura.jpg" alt="topPurpura"></a>
-                              <p>Top Purpura $2500</p>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4"><a href="./pages/detalles-de-imgs/musculosa.html"><img class="img-thumbnail mx-auto d-block mt-5" src="./assets/img/remeras.jpg" alt="mujerTop30"></a>
-                              <p>Remera Musculosa $2800</p>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4"><a href="./pages/detalles-de-imgs/remeraurban.html"><img class="img-thumbnail mx-auto d-block mt-5" src="./assets/img/ian-dooley-TT-ROxWj9nA-unsplash.jpg" alt="remeraManoEsqueleto"></a>
-                              <p>Remera Manga Corta con Diseño Mano Esqueleto $2800</p>
-                            
-                        </div>
-                        
-                    </div>
-                  </div>
-              
-            </section>
-        </div> 
+     <div class="modal-container" id="modal-container"></div>
+     <div class="container " >
+         <section class="imagenesIngresos row">
+               <div class="imagenesIngresos-p">
+                 <p>Nuevos Ingresos</p>
+               </div>
+               
+               
+               <div class="titulosRopa row" id="contener-ropas"></div>
+               <button class="vista-previa-del-producto" id="Vista previa del Producto"></button>
+             
+         </section>
+     </div> 
       
     </div>  
         <section class="container">
