@@ -1,6 +1,7 @@
+
 let misProductos = [
     {
-        nombre: "vestido floreado" ,
+        nombre: "Vestido Floreado" ,
         precio: 2000,
         img: "./assets/img/graphic-woman-dress-trendy-design-on-white-background (1).jpg",
         cantidad: 1,
@@ -8,35 +9,35 @@ let misProductos = [
 
     },
     {
-        nombre: "conjunto blazer y pantalon naranja" ,
+        nombre: "Conjunto blazer y pantalon" ,
         precio: 2000,
         img: "./assets/img/blazer.jpeg",
         cantidad: 1,
         id:2,
     },
     {
-        nombre: "vestido rojo oscuro" ,
+        nombre: "Vestido rojo oscuro" ,
         precio: 3500,
         img: "./assets/img/vestidoelegantecolorbordo.jpg",
         cantidad: 1,
        id:3,
     },
     {
-        nombre: "top purpura" ,
+        nombre: "Top purpura" ,
         precio: 1000,
         img: "./assets/img/topPurpura.jpg",
         cantidad: 1,
        id:4,
     },
     {
-        nombre: "remera musculosa" ,
+        nombre: "Remera musculosa" ,
         precio: 1500,
         img: "./assets/img/remeras.jpg",
         cantidad: 1,
        id:5,
     },
     {
-        nombre: "remera con diseño mano esqueletica" ,
+        nombre: "Remera con diseño" ,
         precio: 900,
         img: "./assets/img/ian-dooley-TT-ROxWj9nA-unsplash.jpg",
         cantidad: 1,
@@ -45,7 +46,7 @@ let misProductos = [
 
 ];
 
-let carrito = [];
+
 
 
 let ropas = document.querySelector("#contener-ropas")
@@ -109,10 +110,10 @@ botonvistaprevia.addEventListener("click", () =>{
         <input type="radio" name="M" id="">M</input>
         <input type="radio" name="L" id="">L</input>
         <p>Cantidad </p>
-        <input type="number" name="" id="boton${prod.id}"></input>
+        <input id="cant-${prod.cantidad}" class="barra-cantidad" type="number"></input>
         
 
-        <button id="boton${prod.id}" class="btn-button">Agregar al Carrito</button>
+        <button id="${prod.id}" class="btn-button">Agregar al Carrito</button>
     </div>
     `;
 
@@ -130,13 +131,13 @@ botonvistaprevia.addEventListener("click", () =>{
         })
 
     vistaDelItem.append(cruzButton);
-
-    //btn del modal para agregar al carrito
-    let btnac = document.getElementById(`boton${prod.id}`);
-    btnac.addEventListener('click', () =>{
-            agregarAlCarrito(prod.id)     
-        })
     
+    //btn del modal para agregar al carrito
+    let btnac = document.getElementById(`${prod.id}`);
+    btnac.addEventListener("click", agregarAlCarrito)
+    
+    let botonBarraCantidad = document.getElementById(`cant-${prod.cantidad}`);
+    botonBarraCantidad.addEventListener("click", agregarAlCarrito)
 })
 
    
@@ -147,23 +148,40 @@ botonvistaprevia.addEventListener("click", () =>{
 carritoDeCompras()
 
 
- function  agregarAlCarrito (id){
-     let producto = misProductos.find((producto) => producto.id === id)
-   let prodEnCarrito = carrito.find((prodrepeat) => prodrepeat.id === parseInt((id)))
-    
-     if (prodEnCarrito) {
-    
-         prodEnCarrito.cantidad++;
-        
-     } else {
-        
-         carrito.push(producto)
-         console.log(carrito)
+ function  agregarAlCarrito (e){
+    const id = parseInt(e.target.id)
+    console.log(id);
+    let producto = misProductos.find((producto) => producto.id === id)
    
-    }
+    let prodEnCarrito = carrito.some(
+    (prodrepeat) => prodrepeat.id === parseInt(id)
+    )
 
+    let prodEnCarrito2 = carrito.find(
+        (prodrepeat2) => prodrepeat2.cantidad === producto.cantidad
+        )
+
+    let prodAlCarrito = {
+        nombre: producto.nombre,
+        id: producto.id,
+        cantidad: 1,
+    }
+    
+    if (prodEnCarrito || prodEnCarrito2) {
+        let indice = carrito.findIndex((prod) => prod.id === id)
+        carrito[indice].cantidad++;
+        carrito[indice].precio = carrito[indice].cantidad * prodAlCarrito.precio;
+        
+     } else{
+        carrito.push(producto)  
+        console.log(carrito)
+     
+    }
+    
+    
     botonAgregarAlCarrito()
-   
+    
+
  }
 
 
@@ -194,6 +212,7 @@ carritoDeCompras()
             let carritoconcontenido = document.createElement("div");
             carritoconcontenido.className = "cajaComprasContenido";
             carritoconcontenido.innerHTML = `
+            
             <img src="${prod.img}">
             <h2>Nombre: ${prod.nombre}</h2>
             <p>Precio: ${prod.precio}</p>
@@ -203,12 +222,14 @@ carritoDeCompras()
             ` ;
             
 
-
+            //boton x para eliminar un item 
             miCarrito.append(carritoconcontenido);
             let eliminar = document.createElement("button");
             eliminar.innerText = "X"
             eliminar.className = "eliminar-producto"
             carritoconcontenido.append(eliminar);
+
+           
            
             
             
@@ -219,13 +240,17 @@ carritoDeCompras()
             
             })
             localStorage.setItem('productos-en-mi-carrito', JSON.stringify(carrito))
-            let productosEnCarrito = localStorage.getItem('productos-en-mi-carrito').split("--");
-                    console.log(productosEnCarrito)
+            
 })
 
 
 }
 
+
+let carrito = JSON.parse(localStorage.getItem("productos-en-mi-carrito")) || [];
+
+
+//funcion para eliminar un producto(del modal de carrito)
 function eliminarItem(prodId){
     
     const buscarId = carrito.find((unelemento) => unelemento.id);
