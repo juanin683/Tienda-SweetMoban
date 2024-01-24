@@ -41,7 +41,8 @@ header {
     flex-direction: row-reverse;
     margin: 2px;
     -webkit-animation: heartbeat 2s ease-in-out  both;
-    animation: heartbeat 2s ease-in-out both; }
+    animation: heartbeat 2s ease-in-out both;
+    margin-left: -69px; }
     header .imgaFinal1 img {
       background-color: #ee8585;
       border-radius: 5%;
@@ -183,8 +184,8 @@ body {
   margin: 2px; }
 
 .imagenesIngresos img {
-  background-color: #c0a3a3;
-  border-color: #7e5861;
+  background-color: #e1cece;
+  border-color: #ff2b5d;
   width: 400px;
   height: 490px;
   object-fit: cover;
@@ -1120,7 +1121,8 @@ footer #pie {
     header html {
       scroll-behavior: smooth; }
     header .imgaFinal1 {
-      margin-right: 20px; }
+      margin-right: 20px;
+      margin-left: 74px; }
       header .imgaFinal1 img {
         background-color: #d99292;
         border-radius: 7%;
@@ -1981,7 +1983,7 @@ header #carrito-compras {
         border-radius: 10%;
         height: 52px;
         width: 50px;
-        margin-left: 74px;
+        
         cursor: pointer;
       }
 
@@ -2024,10 +2026,11 @@ header #carrito-compras {
   
 }  
 .vista-previa-del-producto{
-  background-color: #603a8c;
+  background-color: #2d1616;
   color: white;
   width: 170px;
   height: 53px;
+  border-radius: 3%;
   
 }
 
