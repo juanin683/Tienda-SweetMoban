@@ -1,6 +1,5 @@
 # Tienda SweetMoban
-Este proyecto es para Desarrollo Web
-
+ Tienda solo diseño para Desarrollo Web
 ------------
 
 
