@@ -5,13 +5,13 @@
 
 /*index.html*/
 header {
-  background-color: #9b5a5a;
+  background-color: #9b5a5a91;
   opacity: 0.6;
   align-items: center;
   display: grid;
   grid-template-columns: auto; }
   header .container-fluid {
-    background-color: #ee9696;
+    background-color: #b86b6b80;
     height: 50%;
     align-items: center;
     display: grid;
@@ -35,77 +35,18 @@ header {
     position: absolute;
     top: 37px;
     right: 117px;
-    margin: -30px; }
+    margin: 6px; }
   header .imgaFinal1 {
     display: flex;
     flex-direction: row-reverse;
-    margin: 2px;
-    -webkit-animation: heartbeat 2s ease-in-out  both;
-    animation: heartbeat 2s ease-in-out both;
-    margin-left: -69px; }
+     }
     header .imgaFinal1 img {
       background-color: #ee8585;
       border-radius: 5%;
       border-top: 10%;
       width: 50px; }
 
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    nimation-timing-function: ease-out; }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in; }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in; }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; } }
 
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in; }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in; }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; } }
   header .imgaFinal1 p {
     display: flex;
     flex-direction: row;
@@ -124,6 +65,8 @@ header {
     flex-direction: row;
     list-style: none; }
     header .navBarStyle li a {
+    
+       
       text-decoration: none;
       color: #f7c1cf;
       font-weight: 100px;
@@ -135,6 +78,7 @@ header {
       grid-template-columns: repeat(3, 35px);
       grid-template-rows: 46px; }
 
+
 .container-img-p {
   display: flex;
   margin: 10px;
@@ -144,7 +88,8 @@ header {
   display: flex;
   margin: 13px;
   font-size: 30px;
-  flex-direction: row; }
+  flex-direction: row;
+ }
 
 .img-logo {
   margin: -4px; }
@@ -629,7 +574,8 @@ footer #pie {
     header html {
       scroll-behavior: smooth; }
     header .imgaFinal1 {
-      margin-right: 20px; }
+      margin-top: 19px;
+      padding: 13px; }
       header .imgaFinal1 img {
         background-color: #d99292;
         border-radius: 7%;
@@ -1979,10 +1925,10 @@ header #carrito-compras {
 
 
       #carrito-img{
-        background-color: #dd9d9d;
+        background-color: #c67878;
         border-radius: 10%;
-        height: 52px;
-        width: 50px;
+        height: 46px;
+        width: 46px;
         
         cursor: pointer;
       }

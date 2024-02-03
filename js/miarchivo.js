@@ -146,7 +146,10 @@ botonvistaprevia.addEventListener("click", () =>{
 }
 
 carritoDeCompras()
+function  cantidadDeProductos (cant){
 
+
+}
 
  function  agregarAlCarrito (e){
     const id = parseInt(e.target.id)

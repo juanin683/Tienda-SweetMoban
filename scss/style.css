@@ -20,7 +20,7 @@ header {
   display: grid;
   grid-template-columns: auto;}
 header .container-fluid {
-  background-color: rgb(238, 150, 150);
+  background-color: rgb(221, 125, 125);
   height: 50%;
   align-items: center;
   display: grid;
@@ -32,7 +32,7 @@ header .sombrerito a img {
   bottom: 82%;
   margin: 2px}
 header .sombrerito p {
-  color: white;
+  color: rgb(181, 147, 147);
   position: absolute;
   left: 9%;
   bottom: 87%;
@@ -50,7 +50,7 @@ header .imgaFinal1 {
   flex-direction: row-reverse;
   height: 80px;}
 header .imgaFinal1 img {
-  background-color: rgb(238, 133, 133);
+  background-color: rgb(126, 92, 92);
   border-radius: 5%;
   border-top: 10%;}
 header .imgaFinal1 {
