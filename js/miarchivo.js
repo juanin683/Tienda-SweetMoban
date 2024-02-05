@@ -70,7 +70,7 @@ misProductos.forEach((prod) =>{
     let contenidodiv = document.createElement("div")
     contenidodiv.className= "mis-productos"
     contenidodiv.innerHTML = `
-    <div class="container " >
+    <div class="container fluid" >
         <section class="imagenesIngresos row">
 
             <div class="titulosRopa row" id="contener-ropas"

@@ -269,9 +269,7 @@ body {
 .imagenesCatalogo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  width: 95%;
-  margin: auto;
-  grid-gap: 10px;
+  
   overflow: hidden; }
   .imagenesCatalogo img {
     object-fit: cover;
